@@ -1,0 +1,194 @@
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./common/back_icon.css";
+@import "./common/main_product.css";
+@import "./common/load_more.css";
+
+
+
+
+/*************************************************/
+/* 三行式產品展示 */
+main.main-product {
+  padding: 0;
+}
+
+
+main.main-product > div.grid > div.grid-item {
+  width: calc(calc(100% / 3) - 10px);
+  margin: 0 5px 10px 5px;
+  background-color: black;
+
+}
+/* 三行式產品展示 */
+/*************************************************/
+
+main.designer_container {
+  width: 85%;
+  display: flex;
+  margin: auto;
+
+  margin-top: 20px;
+}
+
+main.designer_container > aside.info_left {
+  width: 45%;
+  height: 900px;
+
+  background-color: white;
+  position: sticky;
+  top: 75px;
+
+  padding: 25px;
+}
+
+aside.info_left >section.page_title{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+aside.info_left > aside {
+  height: 50%;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside.info_left > aside > div.left > div {
+  width: 180px;
+  height: 180px;
+
+
+  border: 1px solid black;
+  background-image: url("../images/designer/designer5.jpg");
+  background-size: cover;
+}
+
+aside.info_left > aside > div.left {
+  display: inline-flex;
+  width: 180px;
+  justify-content: center;
+}
+
+aside.info_left > aside > div.right {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  width: calc(100% - 180px);
+}
+
+aside.info_left > aside > div.right > div.col1 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 100px;
+}
+
+aside.info_left > aside > div.right > div.col1 > div {
+  display: inline-flex;
+  color: #0b2659;
+  width: 100%;
+}
+
+aside.info_left > aside > div.right > div.col1 > div > div.name_row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+aside.info_left > aside > div.right > div.col1 > div > div.name_row > div {
+  display: flex;
+}
+
+div.name_row > div > a.icon {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+aside.info_left > aside > div.right > div.col2 {
+  width: 100%;
+}
+aside.info_left > aside > div.right > div.col2 > hr {
+  margin-bottom: 10px;
+}
+
+aside.info_left > aside > div.right > div.col3 {
+  font-size: 14px;
+}
+
+
+/* 資訊下面best sale */
+aside.info_left > aside.bottom > div.left > h5 {
+  color: #0b2659;
+}
+
+aside.info_left > aside.bottom > div.right{
+  width: calc(100% - 180px);
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+aside.info_left > aside.bottom > div.right >a.sale_item{
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  border-bottom: 1px solid black;
+}
+
+a.sale_item > aside.left{
+  display: inline-flex;
+  /* border: 1px solid black; */
+  align-items: center;
+}
+
+a.sale_item > aside.left>div.product_info{
+  display: flex;
+  align-items: center;
+}
+
+a.sale_item > aside.left>div.product_info>img{
+  margin-right: 20px;
+}
+
+a.sale_item > aside.left>div.sale_num{
+  border: 1px solid black;
+    border-radius: 100%;
+    color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 65px;
+    height: 65px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    text-align: center;
+
+    margin-right: 20px;
+}
+a.sale_item > aside.left>div.sale_num>h2{
+  /* line-height: 65px; */
+}
+
+a.sale_item > aside.right{
+  width: 65px;
+}
+
+
+
+
+/* 右邊設計師產品展示區 */
+
+aside.product_right {
+  /* border: 1px solid green; */
+  width: 55%;
+}
+
+
+

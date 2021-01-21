@@ -1,0 +1,78 @@
+
+/*************************************************************************/
+/************************load more 載入更多區域***************************/
+/*************************************************************************/
+
+section.load-section{
+    display: flex;
+
+    padding: 30px 75px 75px 75px;
+  
+    justify-content: center;
+
+  }
+  
+  section.load-section>button{
+    background-color: transparent;
+  
+    outline: none;
+    border: 1px solid white;
+  
+    cursor: pointer;
+  
+    padding: 20px 65px;
+  }
+  
+  section.load-section>button:hover>h1.button-title{
+    color:  rgb(255, 255, 255);
+    -webkit-text-stroke: 0 white;
+  }
+  
+  
+  section.load-section>button>h1.button-title{
+    display: inline-flex;
+    vertical-align: middle;
+  
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: .5px white;
+  
+    transition: .5s;
+  }
+  
+  section.load-section>button>div.icon{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+    vertical-align: middle;
+  
+    width: 60px;
+    height: 60px;
+  
+    /* border: 1px solid blue; */
+    margin: 0px 10px;
+  }
+  
+  section.load-section>button>div.icon>div.line{
+    height: 1px;
+    width: 100%;
+  
+    background-color: white;
+  }
+  
+  section.load-section>button>div.icon>div.line:last-child{
+    transform: rotate(90deg);
+  }
+  
+  /*************************************************************************/
+  /************************load more 載入更多區域***************************/
+  /*************************************************************************/
+  
+  @media screen and (max-width: 575px){
+    section.load-section>button{
+      padding: unset;
+    }
+    section.load-section>button>div.icon{
+      width: 20px;
+      height: unset;
+    }
+  }

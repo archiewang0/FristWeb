@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/product_info.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/cursor.js" defer></script>
+    <script src="./js/product_info.js" defer></script>
+    <!-- <script
+      src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
+      defer
+    ></script>
+    <script src="./js/masonry.js" defer></script> -->
+  </head>
+  <body>
+    <header id="nav-bar">
+      <!-- 這是navbar -->
+      <div class="nav-position --on_top">
+        <div id="menu">
+          <div class="menuListBG">
+            <div class="menuTopBar">
+              <a href="./index.html">
+                <img src="./images/logos/horizontal-logo-11.svg" alt="" />
+              </a>
+
+              <div id="menu_close_icon" class="JS_cursor_pointer">
+                <div class="menu-icon line1"></div>
+                <div class="menu-icon line2"></div>
+              </div>
+            </div>
+
+            <ul class="menu_ul">
+              <li class="menu_product">
+                <a href="./products.html" class="menu_product">
+                  <div class="menu-icon line1"></div>
+                  <div class="menu-icon line2"></div>
+                  <div class="menu-icon line3"></div>
+
+                  <h1 class="button-title">PRODUCT</h1>
+
+                  <div class=""></div>
+                </a>
+              </li>
+
+              <li class="menu_designer">
+                <a href="./designers.html">
+                  <div class="menu-icon line1"></div>
+                  <div class="menu-icon line2"></div>
+                  <div class="menu-icon line3"></div>
+
+                  <h1 class="button-title">DESIGNER</h1>
+                </a>
+              </li>
+
+              <li class="menu_about">
+                <a href="./about.html">
+                  <div class="menu-icon line1"></div>
+                  <div class="menu-icon line2"></div>
+                  <div class="menu-icon line3"></div>
+
+                  <h1 class="button-title">ABOUT</h1>
+                </a>
+              </li>
+
+              <li class="menu_contact">
+                <a href="./contact_us.html">
+                  <div class="menu-icon line1"></div>
+                  <div class="menu-icon line2"></div>
+                  <div class="menu-icon line3"></div>
+
+                  <h1 class="button-title">CONTACT</h1>
+                </a>
+              </li>
+
+              <li class="menu_cart">
+                <a href="#">
+                  <div class="menu-icon line1"></div>
+                  <div class="menu-icon line2"></div>
+                  <div class="menu-icon line3"></div>
+
+                  <h1 class="button-title">CART</h1>
+                </a>
+              </li>
+
+              <li class="menu_member">
+                <a href="#">
+                  <div class="menu-icon line1"></div>
+                  <div class="menu-icon line2"></div>
+                  <div class="menu-icon line3"></div>
+
+                  <h1 class="button-title">MEMBER</h1>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="sm_search">
+          <div action="#" class="sm_search_form">
+            <div class="row_top">
+              <h1 class="button-title">SEARCH</h1>
+
+              <div class="search_close">
+                <img src="./images/icons/close_icon.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="row_body">
+              <form class="searchForm">
+                <div>
+                  <div class="search_focus">
+                    <a href="./designers.html">Bag</a>
+                    <a href="./designers.html">Hat</a>
+                    <a href="./designers.html">Shoes</a>
+                    <a href="./designers.html">Pants</a>
+                    <a href="./designers.html">Other</a>
+                    <a href="./designers.html">Clothes</a>
+                  </div>
+
+                  <input type="button" />
+                  <input type="text" placeholder="SEARCH" />
+                </div>
+
+                <select name="search" id="">
+                  <option value="PRODUCT" selected>PRODUCT</option>
+                  <option value="DESIGNER">DESIGNER</option>
+                </select>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="cart">
+          <form class="cartForm" action="#">
+            <div class="row_top">
+              <div class="cart_top_left">
+                <h1 class="button-title">YOUR CART</h1>
+                <p>(6)</p>
+              </div>
+
+              <div class="cart_close JS_cursor_pointer">
+                <img src="./images/icons/close_icon.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="row_body">
+              <ul class="cart_list">
+                <li class="empty_showout">
+                  YOUR CART KIND EMPTY,GO BACK SHOPPING
+                </li>
+                <!-- <li class="list_proudct">
+                  <div class="item_img">
+                    <img src="./images/cart_s_pic.jpg" alt="" />
+                    <div class="item_info">
+                      <div class="info_top">
+                        <p>Leona Henderson</p>
+                        <h4>Table lamp</h4>
+                      </div>
+                      <div class="info_bottom">
+                        <p>Size:</p>
+                        <p>Color:</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item_quan">
+                    <div class="quan_outline">
+                      <input class="btn_sub" value="-" type="button" />
+                      <input
+                        class="quan_num"
+                        type="number"
+                        value="1"
+                        min="1"
+                        max="100"
+                        readonly
+                      />
+                      <input class="btn_add" value="+" type="button" />
+                    </div>
+                  </div>
+
+                  <div class="item_price">100 NT$</div>
+
+                  <div class="item_delete">
+                    <input type="button" value="Delete" class="cartItemDelBtn" />
+                  </div>
+                </li> -->
+              
+              </ul>
+            </div>
+
+            <div class="row_subtotal">
+              <h4>SUBTOTAL</h4>
+              <h4>600 NT$</h4>
+            </div>
+
+            <div class="row_bottom">
+              <button>CONTINUE TO PAYMENT</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="member">
+          <div class="memberForm">
+            <div class="row_top">
+              <h1 class="button-title">MY ACCOUNT</h1>
+
+              <div class="member_close JS_cursor_pointer">
+                <img src="./images/icons/close_icon.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="row_body">
+              <div class="row1">
+                <label for="login" class="label-on">
+                  LOGIN
+                  <input type="radio" name="member" id="login" checked />
+                </label>
+                <label for="register">
+                  REGISTER
+                  <input type="radio" name="member" id="register" />
+                </label>
+              </div>
+
+              <div class="row2">
+                <form action="#" id="login_form">
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="EMAIL"
+                  />
+                  <input
+                    type="text"
+                    name="password"
+                    id="password"
+                    placeholder="PASSWORD"
+                  />
+                  <button>LOGIN</button>
+                </form>
+
+                <form action="#" id="register_form">
+                  <input type="text" placeholder="FIRST NAME" />
+                  <input type="text" placeholder="LAST NAME" />
+                  <input type="text" placeholder="EMAIL" />
+                  <input type="text" placeholder="PASSWORD" />
+                  <input type="text" placeholder="CONFIRM YOUR PASSWORD" />
+                  <label>
+                    <input type="checkbox" name="" id="" />
+                    <p>
+                      I've read the Privacy Policy and I consent sending me
+                      marketing communications including news on products,
+                      community and personalized notifications.
+                    </p>
+                  </label>
+                  <button>REGISTER</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="fixed">
+          <!-- js 會增加class 這div#menu 上面 -->
+
+          <div class="nav left-side">
+            <div id="menu_icon" class="JS_cursor_pointer">
+              <div class="menu-icon line1"></div>
+              <div class="menu-icon line2"></div>
+              <div class="menu-icon line3"></div>
+            </div>
+            <a class="logo-container" href="./index.html">
+              <img src="./images/logos/horizontal-logo-11.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="nav right-side">
+            <form class="searchForm">
+              <div>
+                <div class="search_focus">
+                  <a href="./designers.html">Bag</a>
+                  <a href="./designers.html">Hat</a>
+                  <a href="./designers.html">Shoes</a>
+                  <a href="./designers.html">Pants</a>
+                  <a href="./designers.html">Other</a>
+                  <a href="./designers.html">Clothes</a>
+                </div>
+
+                <input type="button" />
+                <input type="text" placeholder="SEARCH" />
+              </div>
+
+              <select name="search" id="">
+                <option value="PRODUCT" selected>PRODUCT</option>
+                <option value="DESIGNER">DESIGNER</option>
+              </select>
+            </form>
+
+            <div id="sm_search_btn">
+              <img src="./images/icons/search-icon.svg" alt="" />
+            </div>
+
+            <div class="icon-container cart-icon JS_cursor_pointer">
+              <img src="./images/icons/cart-icon.svg" alt="" />
+            </div>
+
+            <div class="icon-container member-icon JS_cursor_pointer">
+              <img src="./images/icons/member-icon.svg" alt="" />
+            </div>
+          </div>
+        </nav>
+
+        <nav class="nav-info">
+          <div class="first-row">
+            <div class="col1">
+              <a href="./index.html" class="logo-container">
+                <img src="./images/logos/double-good-top-logo.svg" alt="" />
+              </a>
+            </div>
+
+            <div class="right">
+              <div class="col2">
+                <p>
+                  Double Good -
+                  立志於提供客戶具美感,實用性等產品,所有產品來自於不同的設計師來打造,可以透過產品的外觀質感來感受到設計師獨特的風格品味,與專業的堅持,
+                  如何選擇生活方式呢？快來Double Good
+                  來尋找最符合你的品味的產品，無論是衣服、鞋子、褲子、裙子、包包、品味生活用品等任你挑選...
+                </p>
+
+                <div class="link-container">
+                  <a href="./about.html"> + MORE </a>
+                  <a href="./contact_us.html"> CONTACT > </a>
+                </div>
+              </div>
+
+              <div class="col3">
+                <a href="">
+                  <img src="./images/icons/fb.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./images/icons/ig.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="second-row">
+            <img src="./images/slogan.svg" alt="" />
+          </div>
+        </nav>
+      </div>
+      <!-- 這是navbar -->
+    </header>
+
+    <div class="cursor">
+      <div class="cursorPointer"></div>
+      <div class="cursortext"></div>
+      <svg
+        version="1.1"
+        id="svgCursor"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 97.3 97.3"
+        style="enable-background: new 0 0 97.3 97.3"
+        xml:space="preserve"
+      >
+        <style type="text/css">
+          .st0 {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 1.1206;
+            stroke-miterlimit: 10;
+          }
+          .st1 {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 0.5561;
+            stroke-miterlimit: 10;
+          }
+          .st2 {
+            fill: none;
+            stroke: #000000;
+            stroke-miterlimit: 10;
+          }
+          .st3 {
+            fill: #ffffff;
+          }
+        </style>
+        <polygon
+          class="st3"
+          points="97.3,0 0,0 0,97.3 24,97.3 24,41 80.4,97.3 97.3,80.4 41,24 97.3,24 "
+        />
+      </svg>
+    </div>
+
+    <p class="page_siteMap">
+      <a href="./index.html">INDEX ></a>
+      <a href="./products.html">PRODUCT: Bag ></a>
+      <a href="./product_info.html">Belt Bag</a>
+    </p>
+ 
+    <aside>
+      <div class="back_icon">
+        <a href="./products.html"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.96 67.96">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #fff;
+                }
+                .cls-1,
+                .cls-2 {
+                  stroke: #fff;
+                  stroke-miterlimit: 10;
+                }
+                .cls-2 {
+                  fill: none;
+                }
+              </style>
+            </defs>
+            <title>back_icon</title>
+            <g id="font">
+              <line class="cls-1" x1="0.5" y1="0.5" x2="67.96" y2="67.96" />
+              <line class="cls-2" x1="0.5" y1="0.5" x2="67.96" y2="0.5" />
+              <line class="cls-2" x1="0.5" y1="67.96" x2="0.5" />
+            </g>
+          </svg>
+          <h3>BACK</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main class="product_container">
+   
+
+      <div class="product_left">
+        <main class="product_img">
+          <img src="./images/product_info_imgs/1.jpg" alt="" />
+          <div>
+            <div class="img_number">
+              <h1>3</h1>
+              <p>/ 5</p>
+            </div>
+
+            <div class="preview_img">
+
+              <!-- <div class="chang_img_icon">
+                <img src="./images/product_info_imgs/arrow_left.svg" alt="" />
+              </div> -->
+
+
+              <div class="previewImg">
+                <img src="./images/product_info_imgs/preview.gif" alt="" />
+              </div>
+              <div class="previewImg">
+                <img src="./images/product_info_imgs/preview2.jpg" alt="" />
+              </div>
+              <div class="previewImg">
+                <img src="./images/product_info_imgs/1.jpg" alt="" />
+              </div>
+              <div class="previewImg">
+                <img src="./images/product_info_imgs/preview3.jpg" alt="" />
+              </div>
+              <div class="previewImg">
+                <img src="./images/product_info_imgs/preview4.jpg" alt="" />
+              </div>
+
+
+              <!-- <div class="chang_img_icon">
+                <img src="./images/product_info_imgs/arrow_right.svg" alt="" />
+              </div> -->
+
+            </div>
+          </div>
+        </main>
+        <div>
+          <img
+            src="./images/product_info_imgs/BW_BSPHR_biosphere_transfer_backpack_thisispaper_2.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="./images/product_info_imgs/BSPHR_transfer_bag_army_green_biosphere_2.jpg"
+            alt=""
+          />
+        </div>
+
+      </div>
+
+      <div class="product_right">
+        <form class="product_right_info">
+          <section class="page_title">
+            <h1 class="button-title">Belt Bag</h1>
+            <p class="tag">(Bag)</p>
+          </section>
+
+          <div class="designer_info">
+            <a href="./designer_info.html">
+              <img src="./images/designer/designer_green.jpg" alt="" />
+              <div>
+                <p>Designer :</p>
+                <h6>Laurel Mosley</h6>
+              </div>
+            </a>
+          </div>
+
+          <div class="product_description">
+            <div class="left"></div>
+            <div class="right">
+              <p>
+                來自Laurel Mosley
+                知名的皮件、背包的時尚產品設計師、與澳洲皮革廠跨國合作,在2020推出一款大地色系列的簡約風格腰包系列。
+              </p>
+            </div>
+          </div>
+
+          <div class="product_color">
+            <div class="left">
+              <h6>COLOR</h6>
+            </div>
+            <div class="right">
+              <label class="color_black">
+                <input type="radio" name="color" value="black" checked/>
+                <div class="line"></div>
+              </label>
+              <label class="color_brown">
+                <input type="radio" name="color" value="brown" />
+                <div class="line"></div>
+              </label>
+              <label class="color_green">
+                <input type="radio" name="color" value="green" />
+                <div class="line"></div>
+              </label>
+            </div>
+          </div>
+
+          <div class="product_size">
+            <div class="left">
+              <h6>SIZE</h6>
+            </div>
+            <div class="right">
+              <label>
+                <input type="radio" name="size" value="100cm*100cm" checked />
+                <p>100cm*100cm</p>
+              </label>
+
+              <label>
+                <input type="radio" name="size" value="120cm*120cm" />
+                <p>120cm*120cm</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="product_price">
+            <div class="left">
+              <h6>PRICE</h6>
+            </div>
+            <div class="right">
+              <h6>1000 NT$</h6>
+            </div>
+          </div>
+
+          <div class="product_stock">
+            <div class="left">
+              <h6>STOCK: 8</h6>
+            </div>
+            <div class="right">
+              <p>
+                諾無庫存，需要等至兩個月以上半年之內的補貨時間，再由請訂購者耐心等候謝謝。
+              </p>
+            </div>
+          </div>
+
+          <div class="product_quantity">
+            <div class="left">
+              <h6>QUANTITY</h6>
+            </div>
+            <div class="right">
+              <div class="item_quan">
+                <div class="pd_quan_outline">
+                  <input class="btn_sub" value="-" type="button" />
+                  <input
+                    class="quan_num"
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="100"
+                    readonly
+                  />
+                  <input class="btn_add" value="+" type="button" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product_subtotal">
+            <div class="left">
+              <h6>SUBTOTAL</h6>
+            </div>
+            <div class="right">
+              <h6 class="subtotal_show">1000 NT$</h6>
+            </div>
+          </div>
+
+          <div class="row_bottom">
+            <button id="add_to_cart" type="button">ADD TO CART</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="prodImgChangeIcon">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.19 86.97"><defs><style>.a{fill:#fff;}</style></defs><title>1_14</title><polygon class="a" points="1.41 43.49 44.19 0.71 43.49 0 0 43.49 43.49 86.97 44.19 86.27 1.41 43.49"/></svg>
+        </button>
+        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.19 86.97"><defs><style>.a{fill:#fff;}</style></defs><title>1_14</title><polygon class="a" points="42.78 43.49 0 0.71 0.71 0 44.19 43.49 0.71 86.97 0 86.27 42.78 43.49"/></svg></button>
+      </div>
+    </main>
+ 
+    <footer>
+      <div class="footer-row row1">
+        <a href="./index.html" class="footer-logo">
+          <img src="./images/logos/footer-logo-20.svg" alt="" />
+        </a>
+        <a href="" class="icon">
+          <img src="./images/icons/fb.svg" alt="" />
+        </a>
+        <a href="" class="icon">
+          <img src="./images/icons/ig.svg" alt="" />
+        </a>
+      </div>
+      <div class="footer-row row2">
+        <div class="footer-siemap-container">
+          <div class="inner-row">
+            <div class="title-container">
+              <a href="">
+                <h6>PRODUCT</h6>
+              </a>
+            </div>
+
+            <ul class="product-option">
+              <li>Bag</li>
+
+              <li>Hat</li>
+
+              <li>Shoes</li>
+
+              <li>Pants</li>
+
+              <li>Other</li>
+
+              <li>clothes</li>
+            </ul>
+          </div>
+
+          <div class="inner-row">
+            <div class="title-container">
+              <h6>DESINGER</h6>
+            </div>
+
+            <ul class="product-option">
+              <li>Bag</li>
+              <li>Hat</li>
+              <li>Shoes</li>
+              <li>Pants</li>
+              <li>Other</li>
+              <li>clothes</li>
+            </ul>
+          </div>
+
+          <div class="inner-row">
+            <div class="title-container">
+              <h6>MEMBER</h6>
+            </div>
+
+            <ul class="product-option">
+              <li>Login</li>
+              <li>Register</li>
+            </ul>
+          </div>
+
+          <div class="inner-row">
+            <div class="title-container">
+              <h6>CONTACT</h6>
+            </div>
+          </div>
+
+          <div class="inner-row">
+            <div class="title-container">
+              <h6>ABOUT</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-row row3">
+        <div class="copyRight">
+          <p>Copyright © 2021 DOUBLE GOOD.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

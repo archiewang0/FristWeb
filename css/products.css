@@ -1,0 +1,12 @@
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./common/load_more.css";
+@import "./common/main_product.css";
+
+@import './common/page_title.css';
+@import "./common/recommend_bar.css";
+
+@import "./common/cursor.css";
+@import "./common/sitemap.css";
+
+@import "./common/preload.css"; 

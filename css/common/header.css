@@ -1,0 +1,2511 @@
+/*共用區*/
+* {
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+
+
+/*...................scrollbar 的css style 調整................*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e7e7e7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(155, 155, 155);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0b2659;
+}
+
+/*...................數量加減格子ul li................*/
+div.quan_outline {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+
+  height: 100%;
+}
+
+div.quan_outline > input {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-right: none;
+
+  text-align: center;
+  /* display: inline-flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+div.quan_outline > input.btn_add {
+  border-right: 1px solid black;
+}
+/*...................數量加減格子ul li................*/
+
+div {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 120px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+h1.button-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 46px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  opacity: 0.8;
+  letter-spacing: 2px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+select {
+  outline: none;
+  border: none;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  padding-left: 10px;
+  border-left: 1px solid black;
+}
+
+input {
+  outline: none;
+  border: none;
+
+  font-size: 16px;
+  cursor: text;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+button {
+  background-color: #00256a;
+  color: white;
+  font-size: 52px;
+  font-weight: 900;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="button"] {
+  background-color: white;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  background-color: #7e7e7e;
+  font-size: 0;
+
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/*..................................................*/
+/*.............導覽bar ..........................*/
+/*..................................................*/
+/*..................................................*/
+
+header > div.nav-position {
+  display: block;
+  position: relative;
+  height: 55px;
+  z-index: 2;
+}
+
+header > div.nav-position > nav.nav-info {
+  overflow: hidden;
+
+  transform: translate(0, -100%);
+  transition: transform 0.5s ease-in-out 0s;
+  background-color: white;
+}
+
+/*in top veiwport 加入--on_top class*/
+
+/* header > div.nav-position.--on_top > nav.nav-info {
+  width: 100%;
+  margin-top: 55px;
+
+  transform: translate(0, 0);
+  position: absolute;
+  background-color: white;
+} */
+
+/*.................................................................................................................................*/
+/*...............滾動時畫面........................................................................................................*/
+/*.................................................................................................................................*/
+
+header > div.nav-position > nav.nav-info > div.first-row {
+  width: 100%;
+  height: 200px;
+  margin-top: 55px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header > div.nav-position > nav.nav-info > div.second-row {
+  margin-top: 55px;
+
+  width: 100%;
+}
+
+header > div.nav-position > nav.nav-info > div.first-row > div.col1 {
+  width: 35%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.col1
+  > a.logo-container {
+  width: 70%;
+}
+
+header > div.nav-position > nav.nav-info > div.first-row > div.right {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 37%;
+
+  justify-content: space-between;
+}
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col2 {
+  width: 65%;
+  height: 100%;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+
+  vertical-align: top;
+  position: relative;
+}
+
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col2::after {
+  content: "品味生活";
+  position: absolute;
+  font-size: 18px;
+  font-weight: 900;
+  color: #00256a;
+
+  letter-spacing: 10px;
+
+  top: 0;
+  left: -50px;
+  transform: translate(-100%, 0);
+}
+
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col3 {
+  height: 100%;
+  width: 20%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  opacity: 0.5;
+}
+
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col3
+  > a {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+
+  transform: scale(0.8);
+}
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col3
+  > a:first-child {
+  transform: scale(0.8) translate(70%, 0);
+}
+
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col2
+  > p {
+  display: block;
+  color: black;
+}
+
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col2
+  > div.link-container {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+}
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col2
+  > div.link-container
+  > a:first-child {
+  font-size: 16px;
+  padding: 5px;
+
+  border-bottom: 1px solid #00000080;
+}
+
+header
+  > div.nav-position
+  > nav.nav-info
+  > div.first-row
+  > div.right
+  > div.col2
+  > div.link-container
+  > a:last-child {
+  font-size: 16px;
+
+  text-decoration: none;
+
+  bottom: 0;
+  right: 0;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+/*.................................................................................................................................*/
+/*...............滾動時畫面........................................................................................................*/
+/*.................................................................................................................................*/
+
+/*滾動中的狀態*/
+header > div.nav-position > nav.fixed {
+  width: 100%;
+  height: 55px;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 12px;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+header > div.nav-position > nav.fixed > div.nav {
+  display: inline-flex;
+  height: 100%;
+
+  vertical-align: top;
+}
+
+/*左側navbar*/
+
+header > div.nav-position > nav.fixed > div > div#menu_icon {
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  cursor: pointer;
+  vertical-align: top; /*inline行內對齊用的*/
+}
+
+div.menu-icon {
+  width: 18px;
+  height: 2px;
+  background-color: black;
+
+  margin: 2px;
+}
+
+/*在top logo消失*/
+/* header > div.nav-position.--on_top > nav.fixed > aside > a.logo-container {
+  width: 0;
+} */
+
+header > div.nav-position > nav.fixed > div > a.logo-container {
+  height: 100%;
+  width: 334px;
+  margin-left: 20px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+
+  transition: width 0.5s ease 0s;
+}
+
+header > div.nav-position > nav.fixed > div > a.logo-container > img {
+  width: 334px;
+  max-width: none;
+  max-height: none;
+}
+
+/*右側navbar*/
+header > div.nav-position > nav.fixed > div.nav.right-side {
+  width: calc(100% - 400px);
+  justify-content: flex-end;
+}
+
+header > div.nav-position > nav.fixed > div.nav.right-side > div#sm_search_btn {
+  display: none;
+}
+
+header
+  > div.nav-position
+  > nav.fixed
+  > div.nav.right-side
+  > div.icon-container {
+  height: 100%;
+  width: 30px;
+  padding: 3px;
+
+  display: inline-block;
+
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+header
+  > div.nav-position
+  > nav.fixed
+  > div.nav.right-side
+  > div.icon-container.member-icon {
+  transform: scale(0.8) translate(0, -10%);
+}
+
+header > div.nav-position > nav.fixed > div.nav.right-side > form.searchForm {
+  border: 1px solid black;
+  padding: 5px 0;
+  position: relative;
+  /* margin-left: 30px; */
+
+  display: inline-flex;
+  justify-content: space-between;
+  width: 39%;
+}
+
+form.searchForm > div {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+
+form.searchForm > div > div.search_focus {
+  display: none;
+  flex-wrap: wrap;
+
+  background-color: white;
+  align-items: center;
+
+  position: absolute;
+  top: 25px;
+
+  outline: 1px solid black;
+
+  width: 100%;
+
+  padding: 15px 0 0 30px;
+
+  transition: 0.3s ease 0.1s;
+}
+
+form.searchForm > div > div.search_focus::before {
+  content: "";
+  /* border: 1px solid red; */
+  background-color: white;
+  height: 3px;
+  width: 100%;
+
+  position: absolute;
+  top: -2px;
+  left: 0px;
+}
+
+form.searchForm > div > div.search_focus > a {
+  border: 1px solid #0b2659;
+  padding: 5px 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+div.search_focus > a:hover {
+  background-color: #0b2659;
+  color: white;
+}
+
+header
+  > div.nav-position
+  > nav.fixed
+  > div.nav.right-side
+  > form.searchForm
+  > div
+  > input[placeholder="SEARCH"] {
+  flex-grow: 1;
+}
+
+header
+  > div.nav-position
+  > nav.fixed
+  > div.nav.right-side
+  > form.searchForm
+  > div
+  > input[type="button"] {
+  width: 30px;
+  background-image: url("../../images/icons/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 6px;
+  background-size: 18px;
+  background-color: transparent;
+
+  transform: scale(1);
+  transition: 0.3s;
+  /* border-right: 1px solid black; */
+}
+
+header
+  > div.nav-position
+  > nav.fixed
+  > div.nav.right-side
+  > form.searchForm
+  > div
+  > input[type="button"]:hover {
+  transform: scale(1.2);
+}
+
+/*.................................................................................................................................*/
+/*...............滾動時畫面........................................................................................................*/
+/*.................................................................................................................................*/
+
+/*.................................................................................................................................*/
+/*...............menu..............................................................................................................*/
+/*.................................................................................................................................*/
+
+/*...............menu 一開始 dispaly none ........之後js 會display inline-block.....................................................*/
+div#menu {
+  font-size: 20px;
+  display: inline-block;
+
+  width: 100%;
+
+  height: 100vh;
+  top: 0;
+  position: fixed;
+
+  z-index: -1;
+  opacity: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(-100%, 0);
+
+  transition: z-index 0s ease 0.4s, opacity 0.3s ease 0.1s,
+    transform 0s ease 0.4s;
+}
+
+div#menu.menu_show {
+  z-index: 2;
+  opacity: 1;
+  transform: translate(0, 0);
+
+  transition: z-index 0s ease 0s, opacity 0.3s ease 0.1s;
+}
+
+div#menu.menu_show > div.menuListBG {
+  transform: translate(0, 0);
+}
+
+/*...............menu 一開始 dispaly none ........之後js 會display inline-block.....................................................*/
+
+div#menu > div.menuListBG {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+
+  vertical-align: top;
+
+  transform: translate(-100%, 0);
+  transition: 0.5s;
+}
+
+/*...............menu 最上面最小個 放 橫式logo 跟 close icon.....................................................*/
+div#menu > div.menuListBG > div.menuTopBar {
+  height: 55px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px 40px;
+  align-items: center;
+}
+
+div#menu > div.menuListBG > div.menuTopBar > a {
+  display: inline-block;
+  width: 344px;
+}
+
+div#menu > div.menuListBG > div.menuTopBar > div#menu_close_icon {
+  display: inline-flex;
+  width: 30px;
+  flex-wrap: wrap;
+  height: 30px;
+  vertical-align: top;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+div#menu
+  > div.menuListBG
+  > div.menuTopBar
+  > div#menu_close_icon
+  > div.menu-icon.line1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+div#menu
+  > div.menuListBG
+  > div.menuTopBar
+  > div#menu_close_icon
+  > div.menu-icon.line2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+/*...............menu 最上面最小個 放 橫式logo 跟 close icon.....................................................*/
+
+div#menu > div.menuListBG > ul.menu_ul {
+  height: 100%;
+}
+
+div#menu > div.menuListBG > ul.menu_ul > li {
+  border-bottom: 1px solid black;
+  height: calc(calc(100% - 55px) / 6);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* div#menu > div.menuListBG > ul.menu_ul > li > a > h1 {
+  z-index: 1;
+} */
+
+div#menu > div.menuListBG > ul.menu_ul > li > a {
+  padding: 10px 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  color: #0b2659;
+}
+div#menu > div.menuListBG > ul.menu_ul > li > a:hover {
+  background-color: #0b2659;
+  color: white;
+}
+
+div#menu > div.menuListBG > ul.menu_ul > li > a > div.menu-icon {
+  position: absolute;
+  width: 0;
+  transform-origin: right;
+  transition: 0.3s;
+
+  background-color: white;
+}
+div#menu > div.menuListBG > ul.menu_ul > li > a:hover > div.menu-icon {
+  width: calc(100% - 83px);
+}
+
+div#menu > div.menuListBG > ul.menu_ul > li > a > div.menu-icon.line1 {
+  width: 0;
+  transform: rotate(45deg);
+  right: 40px;
+}
+div#menu > div.menuListBG > ul.menu_ul > li > a:hover > div.menu-icon.line1 {
+  width: 50px;
+  transition: 0.2s ease 0.3s;
+}
+
+div#menu > div.menuListBG > ul.menu_ul > li > a > div.menu-icon.line3 {
+  width: 0;
+  transform: rotate(-45deg);
+  right: 40px;
+}
+div#menu > div.menuListBG > ul.menu_ul > li > a:hover > div.menu-icon.line3 {
+  width: 50px;
+  transition: 0.2s ease 0.3s;
+}
+
+/*.................................................................................................................................*/
+/*...............menu..............................................................................................................*/
+/*.................................................................................................................................*/
+
+/*.................................................................................................................................*/
+/*...............member...................................................................................................*/
+/*.................................................................................................................................*/
+
+div.memberForm > div.row_body > div.row1 {
+  width: 100%;
+  padding: 20px 40px;
+  border-bottom: 1px solid black;
+}
+div.memberForm > div.row_body > div.row1 > label {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+div.memberForm > div.row_body > div.row1 > label.label-on {
+  background-color: #0b2659;
+  color: white;
+  border: none;
+}
+div.memberForm > div.row_body > div.row1 > label > input {
+  display: none;
+}
+
+/*.................................................................................................................................*/
+/*...............member...................................................................................................*/
+/*.................................................................................................................................*/
+
+/*.................................................................................................................................*/
+/*...............cart open...................................................................................................*/
+/*.................................................................................................................................*/
+
+div#cart {
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.349);
+  z-index: -1;
+  opacity: 0;
+  transform: translate(100%, 0);
+
+  transition: z-index 0s ease 0.4s, opacity 0.3s ease 0.1s,
+    transform 0s ease 0.4s;
+}
+
+/*...............cart show 出來 ..................................................................................................*/
+
+div#cart.cart_show {
+  z-index: 2;
+  opacity: 1;
+  transform: translate(0, 0);
+
+  transition: z-index 0s ease 0s, opacity 0.3s ease 0.1s;
+}
+
+div#cart.cart_show > form.cartForm {
+  transform: translate(0, 0);
+}
+
+/*...............cart show 出來 ..................................................................................................*/
+div#cart > form.cartForm {
+  width: 50%;
+  overflow: hidden;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+
+  transform: translate(100%, 0);
+  transition: 0.5s;
+}
+
+/*...............cart 上面 ..................................................................................................*/
+
+div#cart > form.cartForm > div.row_top {
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/*...............cart 上面左邊...................................................................................................*/
+
+div#cart > form.cartForm > div.row_top > div.cart_top_left {
+  height: 100%;
+  width: calc(100% - 120px);
+  display: inline-flex;
+
+  align-items: center;
+  padding: 35px;
+}
+
+div#cart > form.cartForm > div.row_top > div.cart_top_left > p {
+  font-size: 14px;
+  color: black;
+  align-self: flex-start;
+}
+
+div#cart > form.cartForm > div.row_top > div.cart_top_left > h1.button-title {
+}
+
+/*...............cart 上面右邊...................................................................................................*/
+
+div#cart > form.cartForm > div.row_top > div.cart_close {
+  height: 100%;
+  border-left: 1px solid black;
+  width: 135px;
+
+  padding: 35px;
+  cursor: pointer;
+}
+
+/*...............cart 中間...................................................................................................*/
+
+div#cart > form.cartForm > div.row_body {
+  /* border-bottom: 1px solid black; */
+  width: 100%;
+
+  flex-grow: 1;
+  height: 60%;
+  overflow: auto;
+}
+
+div#cart > form.cartForm > div.row_body > ul.cart_list >li.empty_showout {
+  padding: 35px;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: #b3b3b3;
+  transform: translate(0,40%);
+  display: block;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_delete {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_delete
+  > input.cartItemDelBtn {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: white;
+  outline: none;
+
+  border: 1px solid black;
+
+  padding: 20px 25px;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_price {
+  /* border: 1px solid black; */
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_quan {
+  height: 100%;
+}
+
+div#cart > form.cartForm > div.row_body > ul.cart_list > li.list_proudct {
+  height: 100px;
+  margin: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img {
+  display: flex;
+  height: 100%;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img
+  > img {
+    margin-right: 20px;
+    object-fit: cover;
+    height: 85px;
+    width: 85px;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > aside {
+  margin: 0 20px 0 0;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img
+  > div.item_info {
+  height: 100%;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img
+  > div.item_info
+  > div.info_top,
+div.info_bottom {
+  height: 50%;
+}
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img
+  > div.item_info
+  > div.info_top
+  > h4 {
+  color: black;
+}
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img
+  > div.item_info
+  > div.info_top
+  > p {
+  color: black;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img
+  > div.item_info
+  > div.info_bottom {
+  display: flex;
+  /* justify-content: space-between;
+  align-items: flex-end; */
+  flex-direction: column;
+}
+
+div#cart
+  > form.cartForm
+  > div.row_body
+  > ul.cart_list
+  > li.list_proudct
+  > div.item_img
+  > div.item_info
+  > div.info_bottom
+  > p {
+  color: black;
+}
+
+/*...............cart subtotal.............................................................................................*/
+
+div#cart > form.cartForm > div.row_subtotal {
+  border-bottom: 1px solid black;
+  height: 50px;
+  display: flex;
+  padding: 0 35px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+div#cart > form.cartForm > div.row_subtotal > h4 {
+  display: inline-block;
+  font-weight: 900;
+  color: black;
+}
+
+/*...............cart 底部.................................................................................................*/
+
+div.row_bottom {
+  width: 100%;
+  height: calc(100% - 60% - 200px);
+  padding: 0px 35px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+div.row_bottom > button {
+  width: 100%;
+  padding: 20px;
+}
+
+/*.................................................................................................................................*/
+/*...............cart open...................................................................................................*/
+/*.................................................................................................................................*/
+
+/*.................................................................................................................................*/
+/*...............member open...................................................................................................*/
+/*.................................................................................................................................*/
+
+div#member {
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.349);
+
+  z-index: -1;
+  opacity: 0;
+  transform: translate(100%, 0);
+
+  transition: z-index 0s ease 0.4s, opacity 0.3s ease 0.1s,
+    transform 0s ease 0.4s;
+}
+
+div#member.member_show {
+  z-index: 2;
+  opacity: 1;
+  transform: translate(0, 0);
+
+  transition: z-index 0s ease 0s, opacity 0.3s ease 0.1s, transform 0s ease 0s;
+}
+
+div#member.member_show > div.memberForm {
+  transform: translate(0, 0);
+}
+
+div#member > div.memberForm {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  background-color: white;
+
+  transform: translate(100%, 0);
+
+  transition: 0.3s;
+}
+
+div#member > div.memberForm > div.row_top {
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#member > div.memberForm > div.row_body {
+  height: calc(100% - 120px);
+  width: 100%;
+
+  /* border: 1px solid black; */
+  /* background-color: rgb(194, 194, 194); */
+}
+
+div.memberForm > div.row_body > div.row2 {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+div.memberForm > div.row_body > div.row2 > form {
+  /* border: 1px solid blue; */
+  width: 50%;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+
+  /* 位置微調用 */
+  transform: translate(0, -15%);
+}
+
+/* register----------------------------------------------- */
+
+div.memberForm > div.row_body > div.row2 > form#register_form {
+  display: none;
+  height: 80%;
+  overflow: auto;
+  transform: translate(0, -5%);
+}
+
+div.memberForm > div.row_body > div.row2 > form#register_form > button {
+  width: 100%;
+  padding: 20px;
+}
+
+div.memberForm > div.row_body > div.row2 > form#register_form > input {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+form#register_form > label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+form#register_form > label > input {
+  display: inline-block;
+  margin-right: 20px;
+}
+form#register_form > label > p {
+  display: inline-block;
+  color: black;
+  width: 90%;
+}
+
+/* login----------------------------------------------- */
+div.memberForm > div.row_body > div.row2 > form#login_form > input {
+  width: 100%;
+
+  border-bottom: 1px solid black;
+}
+
+div.memberForm > div.row_body > div.row2 > form#login_form > button {
+  width: 100%;
+  padding: 20px;
+}
+
+div.memberForm > div.row_top > h1.button-title {
+  margin: 40px;
+}
+
+div.memberForm > div.row_top > div.member_close {
+  height: 100%;
+  border-left: 1px solid black;
+  width: 135px;
+
+  padding: 35px;
+  cursor: pointer;
+}
+
+/*..............................search.............................................................................................*/
+div#sm_search {
+  display: flex;
+  position: fixed;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.349);
+
+  z-index: -1;
+  opacity: 0;
+  transform: translate(100%, 0);
+
+  transition: z-index 0s ease 0.4s, opacity 0.3s ease 0.1s,
+    transform 0s ease 0.4s;
+}
+
+div#sm_search.search_show {
+  z-index: 2;
+  opacity: 1;
+  transform: translate(0, 0);
+
+  transition: z-index 0s ease 0s, opacity 0.3s ease 0.1s, transform 0s ease 0s;
+}
+
+div#sm_search.search_show > div.sm_search_form {
+  transform: translate(0, 0);
+}
+
+div#sm_search > div.sm_search_form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  align-content: flex-start;
+  background-color: white;
+
+  transform: translate(100%, 0);
+
+  transition: 0.3s;
+}
+
+div#sm_search > div.sm_search_form > div.row_top {
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 120px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.sm_search_form > div.row_top > h1.button-title {
+  margin: 40px;
+}
+
+div.sm_search_form > div.row_top > div.search_close {
+  height: 100%;
+  border-left: 1px solid black;
+  width: 135px;
+
+  padding: 35px;
+  cursor: pointer;
+}
+
+div.sm_search_form > div.row_body {
+  width: 100%;
+  height: 75%;
+  padding: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+div.sm_search_form > div.row_body > form.searchForm {
+  border: 1px solid black;
+  padding: 5px 0;
+  position: relative;
+  /* margin-left: 30px; */
+
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+}
+
+div.sm_search_form > div.row_body > form.searchForm > div > div.search_focus {
+  top: 30px;
+}
+
+form.searchForm > div > div.search_focus::before {
+  content: "";
+  /* border: 1px solid red; */
+  background-color: white;
+  height: 3px;
+  width: 100%;
+
+  position: absolute;
+  top: -2px;
+  left: 0px;
+}
+
+form.searchForm > div > div.search_focus > a {
+  border: 1px solid #0b2659;
+  padding: 5px 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+div.search_focus > a:hover {
+  background-color: #0b2659;
+  color: white;
+}
+
+div.sm_search_form
+  > div.row_body
+  > form.searchForm
+  > div
+  > input[placeholder="SEARCH"] {
+  flex-grow: 1;
+}
+
+div.sm_search_form
+  > div.row_body
+  > form.searchForm
+  > div
+  > input[type="button"] {
+  width: 30px;
+  background-image: url("../../images/icons/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 6px;
+  background-size: 18px;
+  background-color: transparent;
+
+  transform: scale(1);
+  transition: 0.3s;
+  /* border-right: 1px solid black; */
+}
+
+div.sm_search_form
+  > div.row_body
+  > form.searchForm
+  > div
+  > input[type="button"]:hover {
+  transform: scale(1.2);
+}
+
+/*.................................................................................................................................*/
+/*...............RWD................................................................................................*/
+/*.................................................................................................................................*/
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+  /* 共用 */
+  h1 {
+    font-size: 100px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 50px;
+  }
+  /* 首頁 top icon 微調 */
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col3
+    > a:first-child {
+    transform: scale(0.8);
+  }
+
+  div#cart > form.cartForm {
+    width: 60%;
+  }
+
+  div#member > div.memberForm {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  /* 共用 */
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 46px;
+  }
+
+  /* navbar */
+  header > div.nav-position > nav.fixed > div.nav.right-side {
+    width: calc(100% - 200px);
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.right-side > form.searchForm {
+    width: 70%;
+  }
+
+  header > div.nav-position > nav.fixed > div > a.logo-container {
+    width: 80px;
+  }
+  header > div.nav-position > nav.fixed > div > a.logo-container > img {
+    width: 334px;
+  }
+  header > div.nav-position > nav.nav-info > div.first-row {
+    height: unset;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2
+    > p {
+    margin-bottom: 20px;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col3 {
+    flex-grow: 1;
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.right {
+    width: 45%;
+  }
+
+  div#cart > form.cartForm {
+    width: 60%;
+  }
+
+  div#member > div.memberForm {
+    width: 60%;
+  }
+
+  button.pay_button {
+    height: unset;
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.col1 {
+    width: 30%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.col1
+    > a.logo-container {
+    width: 90%;
+  }
+  div.row_bottom > button {
+    width: 95%;
+  }
+  div.row_bottom {
+    padding: unset;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* 共用 */
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 52px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+
+  h1.button-title {
+    font-size: 46px;
+  }
+  button {
+    font-size: 46px;
+  }
+
+  /* cart滿版 */
+  div#cart > form.cartForm {
+    width: 100%;
+  }
+
+  div#menu > div.menuListBG {
+    width: 100%;
+  }
+
+  /* navbar */
+  header > div.nav-position > nav.fixed > div.nav.right-side {
+    width: calc(100% - 200px);
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.right-side > form.searchForm {
+    width: 70%;
+  }
+
+  header > div.nav-position > nav.fixed > aside > a.logo-container {
+    width: 80px;
+  }
+  header > div.nav-position > nav.fixed > aside > a.logo-container > img {
+    width: 334px;
+  }
+  header > div.nav-position > nav.nav-info > div.first-row {
+    height: unset;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2
+    > p {
+    margin-bottom: 20px;
+  }
+
+  header > div.nav-position > nav.nav-info > div.second-row {
+    margin-top: 20px;
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.right-side {
+    width: calc(100% - 140px);
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.col1 {
+    width: 30%;
+    justify-content: flex-end;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.col1
+    > a.logo-container {
+    width: 90%;
+  }
+  header > div.nav-position > nav.nav-info > div.first-row > div.right {
+    width: 60%;
+    margin-top: 30px;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col3 {
+    width: 20%;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2 {
+    flex-grow: 1;
+  }
+
+  div#member > div.memberForm {
+    width: 100%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2::after {
+    transform: translate(0, -150%);
+    top: 0;
+    left: 0;
+    font-size: 18px;
+  }
+
+  div.row_bottom > button {
+    width: 95%;
+  }
+  div.row_bottom {
+    padding: unset;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  header > div.nav-position > nav.fixed > div > a.logo-container {
+    width: 80px;
+  }
+
+  /* 共用 */
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 52px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+
+  h1.button-title {
+    font-size: 46px;
+  }
+  button {
+    font-size: 46px;
+  }
+
+  /* cart滿版 */
+  div#cart > form.cartForm {
+    width: 100%;
+  }
+
+  div#menu > div.menuListBG {
+    width: 100%;
+  }
+
+  /* navbar */
+  header > div.nav-position > nav.fixed > div.nav.right-side {
+    width: calc(100% - 200px);
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.right-side > form.searchForm {
+    width: 70%;
+  }
+
+  header > div.nav-position > nav.fixed > aside > a.logo-container {
+    width: 80px;
+  }
+  header > div.nav-position > nav.fixed > aside > a.logo-container > img {
+    width: 334px;
+  }
+  header > div.nav-position > nav.nav-info > div.first-row {
+    height: unset;
+    padding: 0 20px;
+    justify-content: flex-end;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2
+    > p {
+    margin-bottom: 20px;
+  }
+
+  header > div.nav-position > nav.nav-info > div.second-row {
+    margin-top: 20px;
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.right-side {
+    width: calc(100% - 140px);
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.col1 {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.col1
+    > a.logo-container {
+    width: 40%;
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.right {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col3 {
+    order: 1;
+    width: 20%;
+    transform: translate(-15%, -2%);
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2 {
+    /* flex-grow: 1; */
+    width: 73%;
+    order: 2;
+  }
+
+  div#member > div.memberForm {
+    width: 100%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2::after {
+    display: none;
+  }
+
+  
+  div.row_bottom > button {
+    width: 95%;
+  }
+
+  
+  div.row_bottom {
+    padding: unset;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  header > div.nav-position > nav.fixed > div > a.logo-container {
+    width: 80px;
+  }
+
+  /* 共用 */
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+
+  h1.button-title {
+    font-size: 36px;
+  }
+  button {
+    font-size: 36px;
+  }
+
+  /* cart滿版 */
+  div#cart > form.cartForm {
+    width: 100%;
+  }
+
+  div#menu > div.menuListBG {
+    width: 100%;
+  }
+
+  /* navbar */
+  header > div.nav-position > nav.fixed > div.nav.right-side {
+    width: unset;
+  }
+
+  header > div.nav-position > nav.fixed > aside > a.logo-container {
+    width: 80px;
+  }
+  header > div.nav-position > nav.fixed > aside > a.logo-container > img {
+    width: 334px;
+  }
+  header > div.nav-position > nav.nav-info > div.first-row {
+    height: unset;
+    padding: 0 20px;
+    justify-content: flex-end;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2
+    > p {
+    margin-bottom: 20px;
+  }
+
+  header > div.nav-position > nav.nav-info > div.second-row {
+    margin-top: 20px;
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.col1 {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.col1
+    > a.logo-container {
+    width: 40%;
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.right {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col3 {
+    order: 1;
+    width: 20%;
+    transform: translate(-15%, -2%);
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2 {
+    /* flex-grow: 1; */
+    width: 73%;
+    order: 2;
+  }
+
+  div#member > div.memberForm {
+    width: 100%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2::after {
+    display: none;
+  }
+  header
+    > div.nav-position
+    > nav.fixed
+    > div.nav.right-side
+    > div.icon-container.member-icon {
+    display: none;
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.right-side > form.searchForm {
+    display: none;
+  }
+
+  header
+    > div.nav-position
+    > nav.fixed
+    > div.nav.right-side
+    > div#sm_search_btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 3.5px;
+  }
+  button.pay_button {
+    height: unset;
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.left-side {
+    width: 56%;
+    justify-content: space-between;
+  }
+
+  div#cart > form.cartForm > div.row_top > div.cart_top_left > p {
+    line-height: 80px;
+    margin-left: 10px;
+  }
+  div#cart > form.cartForm > div.row_top > div.cart_top_left {
+    padding: 10px;
+  }
+  div#cart > form.cartForm > div.row_subtotal {
+    padding: 0 10px;
+  }
+  div#cart > form.cartForm > div.row_body > ul.cart_list > li.list_proudct {
+    margin: 10px;
+    height: unset;
+    justify-content: space-between;
+    /* padding-bottom: 10px;
+    border-bottom: 1px solid black; */
+  }
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img
+    > div.item_info {
+    height: unset;
+  }
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img
+    > img {
+    height: 80px;
+    margin-right: 10px;
+  }
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img {
+    /* width: 100%; */
+  }
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_delete
+    > input.cartItemDelBtn {
+    padding: 5px;
+  }
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img
+    > div.item_info
+    > div.info_top
+    > h4 {
+    font-size: 18px;
+  }
+  div.quan_outline > input {
+    width: 25px;
+    height: 25px;
+  }
+  div.row_bottom {
+    padding: 0px 10px;
+  }
+  div.memberForm > div.row_top > h1.button-title {
+    margin: 10px;
+  }
+  div.memberForm > div.row_body > div.row1 {
+    padding: 20px 10px;
+  }
+  div.memberForm > div.row_body > div.row2 > form {
+    width: 100%;
+  }
+  div.sm_search_form > div.row_top > h1.button-title {
+    margin: 10px;
+  }
+  div.sm_search_form > div.row_body {
+    padding: 10px;
+  }
+
+  div#cart > form.cartForm > div.row_body > ul.cart_list >li.empty_showout{
+    transform: unset;
+  }
+  div.row_bottom > button{
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  div.sm_search_form > div.row_body {
+    padding: 10px;
+  }
+
+  div.sm_search_form > div.row_top > h1.button-title {
+    margin: 10px;
+    order: 2;
+  }
+
+  /* 共用 */
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  a{
+    font-size: 14px;
+  }
+  p{
+    font-size: 12px;
+  }
+
+
+  h1.button-title {
+    font-size: 22px;
+  }
+  button {
+    font-size: 22px;
+  }
+
+  /* cart滿版 */
+  div#cart > form.cartForm {
+    width: 100%;
+  }
+
+  div#menu > div.menuListBG {
+    width: 100%;
+  }
+
+  header > div.nav-position > nav.fixed > aside > a.logo-container {
+    width: 80px;
+  }
+  header > div.nav-position > nav.fixed > aside > a.logo-container > img {
+    width: 334px;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2
+    > p {
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  header > div.nav-position > nav.nav-info > div.second-row {
+    margin-top: 20px;
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row > div.right {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  div#member > div.memberForm {
+    width: 100%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2::after {
+    display: none;
+  }
+  header
+    > div.nav-position
+    > nav.fixed
+    > div.nav.right-side
+    > div.icon-container.member-icon {
+    display: none;
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.right-side > form.searchForm {
+    display: none;
+  }
+
+  button.pay_button {
+    height: unset;
+  }
+
+  header > div.nav-position > nav.fixed > div.nav.left-side {
+    width: 56%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img
+    > div.item_info {
+    height: unset;
+  }
+
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_delete
+    > input.cartItemDelBtn {
+    padding: 5px;
+  }
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img
+    > div.item_info
+    > div.info_top
+    > h4 {
+    font-size: 18px;
+  }
+  div.quan_outline > input {
+    width: 25px;
+    height: 25px;
+  }
+  div.row_bottom {
+    padding: 0px 10px;
+  }
+  div.memberForm > div.row_top > h1.button-title {
+    margin: 10px;
+  }
+
+  div.memberForm > div.row_body > div.row2 > form {
+    width: 100%;
+  }
+
+  div#menu > div.menuListBG > div.menuTopBar {
+    padding: 10px;
+  }
+  div#menu > div.menuListBG > div.menuTopBar > a {
+    width: unset;
+    transform: translate(0, 11%);
+  }
+  div#menu > div.menuListBG > div.menuTopBar > a > img {
+    width: 70px;
+    height: 40px;
+    object-fit: none;
+    object-position: 0;
+  }
+  div#menu > div.menuListBG > ul.menu_ul > li > a {
+    padding: 10px;
+  }
+
+  header > div.nav-position > nav.nav-info > div.first-row {
+    height: unset;
+    padding: 0 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.col1
+    > a.logo-container {
+    width: 60%;
+    /* transform: translate(10px,0); */
+  }
+  header > div.nav-position > nav.nav-info > div.first-row > div.col1 {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col2 {
+    height: unset;
+    width: 100%;
+    order: 1;
+  }
+
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col3 {
+    order: 2;
+    width: 100%;
+    height: unset;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > div.right
+    > div.col3
+    > a:first-child {
+    transform: scale(0.8);
+  }
+
+  header
+    > div.nav-position
+    > nav.fixed
+    > div.nav.right-side
+    > div#sm_search_btn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    /* padding: 3.5px; */
+  }
+  header
+    > div.nav-position
+    > nav.fixed
+    > div.nav.right-side
+    > div.icon-container {
+    width: 20px;
+    height: 20px;
+    padding: unset;
+    margin-left: 20px;
+  }
+
+  /* navbar */
+  header > div.nav-position > nav.fixed > div.nav.right-side {
+    width: unset;
+    align-items: center;
+  }
+
+  header > div.nav-position > nav.fixed > div > a.logo-container {
+    width: 80px;
+    transform: translate(30%, 10%);
+    height: unset;
+  }
+
+  header > div.nav-position > nav.fixed {
+    padding: 5px;
+  }
+  div#sm_search > div.sm_search_form > div.row_top {
+    height: unset;
+    border: none;
+    justify-content: center;
+  }
+  div.sm_search_form > div.row_top > div.search_close {
+    padding: unset;
+    width: 100%;
+    height: unset;
+    justify-content: center;
+    display: flex;
+    border-bottom: 1px solid;
+    border-left: none;
+  }
+  div.sm_search_form > div.row_top > div.search_close > img {
+    width: 50px;
+    padding: 10px;
+    /* margin-top: 10px; */
+  }
+  div.sm_search_form
+    > div.row_body
+    > form.searchForm
+    > div
+    > input[placeholder="SEARCH"] {
+    width: 100%;
+  }
+  div.sm_search_form > div.row_body {
+    height: 50%;
+  }
+
+  div#cart > form.cartForm > div.row_top {
+    height: unset;
+    border: none;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  div#cart > form.cartForm > div.row_top > div.cart_close {
+    padding: unset;
+    width: 100%;
+    height: unset;
+    justify-content: center;
+    display: flex;
+    border-bottom: 1px solid;
+    border-left: none;
+  }
+  form.cartForm > div.row_top > div.cart_close > img {
+    width: 50px;
+    padding: 10px;
+    /* margin-top: 10px; */
+  }
+
+  div#cart > form.cartForm > div.row_top > div.cart_top_left {
+    padding: 10px;
+    order: 1;
+    height: unset;
+    width: unset;
+  }
+
+  div#cart > form.cartForm > div.row_top > div.cart_top_left > p {
+    line-height: 40px;
+    margin-left: 10px;
+  }
+  div.row_bottom > button {
+    padding: unset;
+    font-size: 20px;
+    width: 95%;
+  }
+  div#cart > form.cartForm > div.row_subtotal > h4 {
+    letter-spacing: unset;
+  }
+
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img
+    > img {
+    /* height: 50px; */
+    margin-right: 10px;
+  }
+
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_img {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  div#cart > form.cartForm > div.row_body > ul.cart_list > li.list_proudct {
+    margin: 10px;
+    height: unset;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+  } 
+  div#cart
+    > form.cartForm
+    > div.row_body
+    > ul.cart_list
+    > li.list_proudct
+    > div.item_quan,
+  div.item_price,
+  div.item_delete {
+    margin: 0 5px;
+  }
+
+  div#member > div.memberForm > div.row_subtotal {
+    padding: 0 10px;
+    height: 30px;
+    /* line-height: 20px; */
+  }
+
+  div#member > div.memberForm > div.row_top {
+    height: unset;
+    border: none;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  div#member > div.memberForm > div.row_top > div.member_close {
+    padding: unset;
+    width: 100%;
+    height: unset;
+    justify-content: center;
+    display: flex;
+    border-bottom: 1px solid;
+    border-left: none;
+  }
+  div.memberForm > div.row_top > div.member_close > img {
+    width: 50px;
+    padding: 10px;
+    /* margin-top: 10px; */
+  }
+
+  div#member > div.memberForm > div.row_top > h1 {
+    padding: 10px;
+    order: 1;
+    height: unset;
+    width: unset;
+    line-height: 40px;
+    margin: unset;
+  }
+  div.memberForm > div.row_body > div.row1 {
+    padding: unset;
+    text-align: center;
+    border: none;
+  }
+  div.memberForm > div.row_body > div.row1 > label{
+    margin: 0 5px;
+  }
+  div.memberForm > div.row_body > div.row2{
+    padding: 0 20px;
+  }
+  div.memberForm > div.row_body > div.row2 > form#login_form > button{
+    padding: 10px;
+  }
+  div.memberForm > div.row_body > div.row2 > form#register_form > button{
+    padding: 10px;
+  }
+  form#register_form > label > p{
+    width: 86%;
+  }
+
+  div#cart > form.cartForm > div.row_body > ul.cart_list >li.empty_showout{
+    font-size: 20px;
+  }
+}

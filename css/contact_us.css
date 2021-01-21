@@ -1,0 +1,65 @@
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./common/back_icon.css";
+
+main.contact_us{
+
+  width: 50%;
+  margin: auto;
+}
+ 
+/* 上面資訊 */
+main.contact_us>aside.top{
+
+  color: white;
+  margin: 50px 0 ;
+}
+
+main.contact_us>aside.top>h1{
+  color: white;
+}
+
+main.contact_us>aside.top>p{
+  margin: 20px 0;
+}
+
+/* 下面表格 */
+main.contact_us>aside.bottom{
+  margin-top: 15vh;
+  text-align: center;
+  color: white;
+}
+
+main.contact_us>aside.bottom>form{
+  width: 100%;
+  background-color: white;
+  border: 1px solid darkseagreen;
+  padding: 50px;
+  margin: 50px 0;
+}
+
+main.contact_us>aside.bottom>form>input{
+  width: calc(50% - 20px);
+  margin: 40px 10px;
+  border-bottom: 1px solid black;
+
+  padding: 0;
+}
+main.contact_us>aside.bottom>form>input[name="email"]{
+  /* border: 1px solid black; */
+  width: calc(100% - 20px);
+}
+
+main.contact_us>aside.bottom>form>textarea{
+  margin: 40px 10px;
+  width: calc(100% - 20px);
+  height: 40vh;
+  font-size: 16px;
+
+  resize: vertical;
+}
+
+main.contact_us>aside.bottom>form>button{
+  margin: 20px 10px;
+  width: calc(100% - 20px);
+}

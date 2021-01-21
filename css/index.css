@@ -1,0 +1,988 @@
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./common/load_more.css";
+@import "./common/main_product.css";
+@import "./common/cursor.css";
+
+@import "./common/preload.css";
+
+/***將滾動最上讓logo消失的 class 存放在index裡面
+這樣只有 index 會有這個特效**/
+/* 
+header > div.nav-position.--on_top{
+  height: unset;
+} */
+
+header > div.nav-position.--on_top > nav.fixed > div > a.logo-container {
+  width: 0;
+}
+
+header > div.nav-position.--on_top > nav.nav-info {
+  width: 100%;
+  margin-top: 55px;
+
+  transform: translate(0, 0);
+  position: absolute;
+  background-color: white;
+}
+
+/***將滾動最上讓logo消失的 class 存放在index裡面
+這樣只有 index 會有這個特效**/
+
+@keyframes jumpforscroll {
+  0% {
+    transform: translate(10%, 10%);
+  }
+  50% {
+    transform: translate(10%, -10%);
+  }
+  100% {
+    transform: translate(10%, 10%);
+  }
+}
+
+/* body {
+  height: 4000px;
+} */
+ 
+/*********************遮擋破格icon******************************************/
+
+div#container {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*************************************************************************/
+/*****************************bnanner區域*********************************/
+/*************************************************************************/
+main.banner {
+  width: 100%;
+}
+
+main.banner > div.slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 整個包覆的外框 */
+main.banner > div.slider > div.slides {
+  /* 裝載圖片的 */
+  width: 300vw;
+  transition: 1.5s;
+  display: flex;
+}
+
+main.banner > div.slider > input {
+  display: none;
+}
+
+/* 可以在這裡設立 尺寸來裁切 */
+main.banner > div.slider > div.slides > div.slide {
+  transition: 1.5s;
+
+  width: 100vw;
+  /* height: 80vh; */
+  overflow: hidden;
+  position: relative;
+}
+
+main.banner > div.slider > div.slides > div.slide > img {
+
+  max-width: none;
+  max-height: none;
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+main.banner > div.slider div.navigation-manual,
+div.navigation-auto {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+main.banner > div.slider div.navigation-manual > label.manual-btn,
+div.navigation-auto > div {
+  border: 1px solid white;
+  border-radius: 100%;
+
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0);
+
+  display: block;
+  width: 150px;
+  height: 150px;
+  -webkit-text-stroke: 1px white;
+
+  text-align: center;
+  line-height: 140px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+main.banner > div.slider div.navigation-manual > label.manual-btn:hover {
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0px white; 
+}
+
+
+/* 輪播的時候 check slides 跑多少 */
+#radio1:checked ~ .slides {
+  transform: translate(0, 0);
+}
+
+#radio2:checked ~ .slides {
+  transform: translate(-33.33%, 0);
+}
+
+#radio3:checked ~ .slides {
+  transform: translate(-66.66%, 0);
+}
+
+#radio1:checked ~ div.navigation-auto > div.auto-btn1 {
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0px white;
+}
+
+#radio2:checked ~ div.navigation-auto > div.auto-btn2 {
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0px white;
+}
+
+#radio3:checked ~ div.navigation-auto > div.auto-btn3 {
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0px white;
+}
+
+/*************************************************************************/
+/*****************************bnanner區域********************************/
+/*************************************************************************/
+
+/*************************************************************************/
+/*****************************banner內容區域******************************/
+/*************************************************************************/
+main.banner-position {
+  width: 100%;
+
+  padding: 0 75px;
+
+  background-color: #0b2659;
+  color: white;
+}
+
+main.banner-position > div.banner-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -50px;
+  flex-wrap: wrap;
+}
+
+ div.banner-content > div.left {
+  position: relative;
+}
+
+ div.banner-content > div.left > h1 {
+  line-height: 80px;
+}
+ div.banner-content > div.left > h1::before {
+  content: "新品上架";
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+
+  display: inline-block;
+  position: absolute;
+  line-height: 5px;
+
+  top: -20px;
+  left: 7px;
+}
+
+ div.banner-content > div.right {
+  width: 36%;
+  display: inline-flex;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ div.banner-content > div.right > div.context-side {
+  width: 70%;
+}
+
+ div.banner-content > div.right > div.scroll-side {
+  width: 100px;
+
+}
+
+ div.banner-content > div.right > div.scroll-side > a {
+  animation-name: jumpforscroll;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+
+  display: inline-block;
+  width: 100%;
+}
+
+main.banner-position
+  > div.banner-content
+  > div.right
+  > div.scroll-side
+  > a
+  > img {
+  transform: translate(10%, 0);
+
+  width: 100%;
+  max-width: none;
+  max-height: none;
+}
+
+/*************************************************************************/
+/*****************************banner內容區域******************************/
+/*************************************************************************/
+
+/*************************************************************************/
+/*****************************product內容區域*****************************/
+/*************************************************************************/
+section.product {
+  width: 100%;
+  height: 420px;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 75px;
+
+  /* border: 1px solid yellow; */
+}
+
+section.product > div {
+  width: 50%;
+}
+
+/********************************左側************************************/
+
+section.product > div.left > div.bakcground {
+  position: relative;
+  width: 100%;
+}
+
+section.product > div.left > div.bakcground > img {
+  transform: scale(1.4) translate(0, 10%);
+
+  transform-origin: left;
+}
+
+section.product > div.left > div.bakcground > svg {
+  position: absolute;
+  width: 100%;
+  transform: scale(1.9) translate(20%, -2%);
+
+  left: 0;
+  transform-origin: left;
+}
+
+/********************************右側************************************/
+
+section.product > div.right {
+  z-index: 1;
+  text-align: center;
+
+  display: inline-flex;
+  justify-content: center;
+
+  flex-wrap: wrap; /*這兩個要綁一起才有效果*/
+  align-content: center; /*這兩個要綁一起才有效果*/
+}
+
+section.product > div.right > div.right-inner {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+
+  transform: translate(5%, 0);
+}
+
+section.product > div.right > div.right-inner > h3,
+p {
+  color: white;
+}
+
+/*************************************************************************/
+/*****************************product內容區域*****************************/
+/*************************************************************************/
+
+
+
+/****************************************************************************************************************************/
+/**************************RWD 專區 ***************************************************************************************/
+/****************************************************************************************************************************/
+
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+  /* banner 的123選擇icon */
+  /* main.banner > div.slider div.navigation-manual,
+  div.navigation-auto {
+    top: 40%;
+    transform: translate(0, -50%);
+  } */
+
+  main.banner > div.slider > div.slides > div.slide{
+    height: 80vh;
+  }
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  main.banner-position > div.banner-content > div.right{
+    width: 100%;
+  }
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+ header > div.nav-position > nav.nav-info > div.first-row > div.right > div.col2{
+   width: 75%;
+ }
+
+  main.banner > div.slider div.navigation-manual > label.manual-btn,
+  div.navigation-auto > div {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  main.banner-position
+    > div.banner-content
+    > div.right
+    > div.scroll-side
+    > a
+    > img {
+    transform: translate(20%, 0);
+  }
+  /* banner 下面的底圖gif */
+  section.product > div.left > div.bakcground > img {
+    transform: scale(1.5) translate(0, 13%);
+    transform-origin: unset;
+  }
+  /* 背景的line */
+  section.product > div.left > div.bakcground > svg {
+    transform: scale(2.1) translate(30%, 2%);
+    transform-origin: unset;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  /* banner 的123選擇icon */
+  /* main.banner > div.slider div.navigation-manual,
+  div.navigation-auto {
+    top: 35%;
+    transform: translate(0, -50%);
+  } */
+
+  main.banner > div.slider > div.slides > div.slide{
+    height: 80vh;
+  }
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  main.banner-position > div.banner-content > div.right{
+    width: 100%;
+  }
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+ header > div.nav-position > nav.nav-info > div.first-row > div.right > div.col2{
+   width: 75%;
+ }
+
+  main.banner > div.slider div.navigation-manual > label.manual-btn,
+  div.navigation-auto > div {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  main.banner-position
+    > div.banner-content
+    > div.right
+    > div.scroll-side
+    > a
+    > img {
+      transform: translate(-30%, -20%);
+  }
+
+  /* banner 內容padding */
+  main.banner-position {
+    padding: 0 20px;
+  }
+
+  main.banner-position > div.banner-content > div.right {
+    width: 100%;
+  }
+  main.banner-position > div.banner-content > div.right > div.scroll-side {
+    transform: translate(-10%, 5%);
+  }
+
+  /* banner 下面的底圖gif */
+  section.product > div.left > div.bakcground > img {
+    transform: scale(1.5) translate(0, 13%);
+    transform-origin: unset;
+  }
+  /* 背景的line */
+  section.product > div.left > div.bakcground > svg {
+    transform: scale(2.1) translate(30%, 2%);
+    transform-origin: unset;
+  }
+
+  section.product > div.right {
+    justify-content: unset;
+    align-content: center;
+  }
+
+  section.product > div.right > div.right-inner {
+    width: 80%;
+    transform: translate(-5%, 0);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* banner 的123選擇icon */
+  /* main.banner > div.slider div.navigation-manual,
+  div.navigation-auto {
+    top: 30%;
+    transform: translate(0, -50%);
+  } */
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+
+  main.banner > div.slider div.navigation-manual > label.manual-btn,
+  div.navigation-auto > div {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  main.banner-position
+    > div.banner-content
+    > div.right
+    > div.scroll-side
+    > a
+    > img {
+    transform: translate(20%, 0);
+  }
+
+  /* banner 內容padding */
+  main.banner-position {
+    padding: 0 20px;
+    height: unset;
+  }
+
+  main.banner-position > div.banner-content > div.right > div.scroll-side {
+    text-align: unset;
+    transform: translate(-75%, 0%);
+    width: unset;
+  }
+
+  /* banner 下面的底圖gif */
+  section.product > div.left > div.bakcground > img {
+    transform: scale(1.5) translate(0, 13%);
+    transform-origin: unset;
+  }
+  /* 背景的line */
+  section.product > div.left > div.bakcground > svg {
+    transform: scale(2.1) translate(30%, 2%);
+    transform-origin: unset;
+  }
+
+  section.product > div.right {
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  section.product > div.right > div.right-inner {
+    width: 80%;
+    transform: translate(-5%, 0);
+    text-align: right;
+  }
+
+  main.banner-position > div.banner-content {
+    flex-wrap: wrap;
+  }
+
+  main.banner-position > div.banner-content > div.left > h1::before {
+    font-size: 14px;
+    top: unset;
+  }
+
+
+
+  div.banner-content > div.right > div.context-side {
+    width: 60%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > aside.right
+    > div.col3
+    > a:first-child {
+    transform: scale(0.8);
+  }
+  section.product {
+    height: unset;
+    padding: 20px;
+  }
+
+
+
+  main.banner-position > div.banner-content > div.right {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  main.banner > div.slider > div.slides > div.slide{
+    height: 80vh;
+  }
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* banner 的123選擇icon */
+  /* main.banner > div.slider div.navigation-manual,
+  div.navigation-auto {
+    top: 30%;
+    transform: translate(0, -50%);
+  } */
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+
+  main.banner > div.slider div.navigation-manual > label.manual-btn,
+  div.navigation-auto > div {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  main.banner-position
+    > div.banner-content
+    > div.right
+    > div.scroll-side
+    > a
+    > img {
+    transform: translate(20%, 0);
+  }
+
+  /* banner 內容padding */
+  main.banner-position {
+    padding: 0 20px;
+    height: unset;
+  }
+
+  main.banner-position > div.banner-content > div.right > div.scroll-side {
+    text-align: unset;
+    transform: translate(-75%, 0%);
+    width: unset;
+  }
+
+  /* banner 下面的底圖gif */
+  section.product > div.left > div.bakcground > img {
+    transform: scale(1.5) translate(0, 13%);
+    transform-origin: unset;
+  }
+  /* 背景的line */
+  section.product > div.left > div.bakcground > svg {
+    transform: scale(2.1) translate(30%, 2%);
+    transform-origin: unset;
+  }
+
+  section.product > div.right {
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  section.product > div.right > div.right-inner {
+    width: 80%;
+    transform: translate(-5%, 0);
+    text-align: right;
+  }
+
+  main.banner-position > div.banner-content {
+    flex-wrap: wrap;
+  }
+
+  main.banner-position > div.banner-content > div.left > h1::before {
+    font-size: 14px;
+    top: unset;
+  }
+
+
+
+  div.banner-content > div.right > div.context-side {
+    width: 60%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > aside.right
+    > div.col3
+    > a:first-child {
+    transform: scale(0.8);
+  }
+  section.product {
+    height: unset;
+    padding: 20px;
+  }
+
+
+
+  main.banner-position > div.banner-content > div.right {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  main.banner > div.slider > div.slides > div.slide{
+    height: 80vh;
+  }
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+
+}
+
+@media screen and (min-width: 576px ) and (max-width: 767px) {
+   /* banner 的123選擇icon */
+  /* main.banner > div.slider div.navigation-manual,
+  div.navigation-auto {
+    top: 30%;
+    transform: translate(0, -50%);
+  } */
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+
+  main.banner > div.slider div.navigation-manual > label.manual-btn,
+  div.navigation-auto > div {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  main.banner-position
+    > div.banner-content
+    > div.right
+    > div.scroll-side
+    > a
+    > img {
+    transform: translate(20%, 0);
+  }
+
+  /* banner 內容padding */
+  main.banner-position {
+    padding: 0 20px;
+    height: unset;
+  }
+
+  main.banner-position > div.banner-content > div.right > div.scroll-side {
+    text-align: unset;
+    transform: translate(-75%, 0%);
+    width: unset;
+  }
+
+  /* banner 下面的底圖gif */
+  section.product > div.left > div.bakcground > img {
+    transform: scale(1.5) translate(0, 13%);
+    transform-origin: unset;
+  }
+  /* 背景的line */
+  section.product > div.left > div.bakcground > svg {
+    transform: scale(2.1) translate(30%, 2%);
+    transform-origin: unset;
+  }
+
+  section.product > div.right {
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  section.product > div.right > div.right-inner {
+    width:100%;
+    transform: translate(-5%, 0);
+    text-align: right;
+  }
+
+  main.banner-position > div.banner-content {
+    flex-wrap: wrap;
+  }
+
+  main.banner-position > div.banner-content > div.left > h1::before {
+    font-size: 14px;
+    top: unset;
+  }
+
+
+
+  div.banner-content > div.right > div.context-side {
+    width: 60%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > aside.right
+    > div.col3
+    > a:first-child {
+    transform: scale(0.8);
+  }
+  section.product {
+    height: unset;
+    padding: 20px;
+  }
+
+
+
+  main.banner-position > div.banner-content > div.right {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  main.banner > div.slider > div.slides > div.slide{
+    height: 80vh;
+  }
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+ div.banner-content > div.right > div.context-side {
+   width: 80%;
+ }
+ 
+}
+
+@media screen and (max-width: 575px ) {
+    /* banner 的123選擇icon */
+  /* main.banner > div.slider div.navigation-manual,
+  div.navigation-auto {
+    top: 30%;
+    transform: translate(0, -50%);
+  } */
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+
+ div.banner-content > div.right > div.context-side {
+   width: 60%;
+ }
+
+
+
+  main.banner-position
+    > div.banner-content
+    > div.right
+    > div.scroll-side
+    > a
+    > img {
+    transform: unset;
+    width: 40px;
+  }
+
+  /* banner 內容padding */
+  main.banner-position {
+    padding: 0 5px;
+    height: unset;
+  }
+
+  main.banner-position > div.banner-content > div.right > div.scroll-side {
+    text-align: unset;
+    transform: unset;
+    width: unset;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+  }
+
+  /* banner 下面的底圖gif */
+  section.product > div.left > div.bakcground > img {
+    transform: scale(1.5) translate(0%, 0%);
+    transform-origin: unset;
+  }
+  /* 背景的line */
+  section.product > div.left > div.bakcground > svg {
+    transform: scale(2.2) translate(34%, -9%);
+    transform-origin: unset;
+  }
+
+  section.product > div.right {
+    justify-content: flex-end;
+    align-content: center;
+    width: 100%;
+
+  }
+
+  section.product > div.right > div.right-inner {
+    width:100%;
+    transform: translate(0,-15%);
+    text-align: left;
+  }
+
+  main.banner-position > div.banner-content {
+    top: unset;
+  }
+
+  main.banner-position > div.banner-content > div.left > h1::before {
+    font-size: 14px;
+    top: -5px;
+    left: 0;
+  }
+
+
+
+  div.banner-content > div.right > div.context-side {
+    width: 60%;
+  }
+  header
+    > div.nav-position
+    > nav.nav-info
+    > div.first-row
+    > aside.right
+    > div.col3
+    > a:first-child {
+    transform: scale(0.8);
+  }
+  section.product {
+    height: unset;
+    padding: 5px;
+  }
+
+
+
+  main.banner-position > div.banner-content > div.right {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  main.banner > div.slider > div.slides > div.slide{
+    height: 80vh;
+  }
+
+  main.banner-position > div.banner-content > div.left {
+    position: relative;
+    width: 100%;
+    margin-bottom: unset;
+    margin: 20px 0;
+  }
+
+ div.banner-content > div.right > div.context-side {
+    width: 100%;
+    order: 1;
+    margin-bottom: 60px;
+ }
+ div.banner-content > div.left > h1{
+   line-height: unset;
+ }
+
+ main.banner > div.slider div.navigation-manual, div.navigation-auto{
+   display: inline-flex;
+   bottom: 0;
+   right: unset;
+   top: unset;
+   left: 50%;
+   transform: translate(-50%,0);
+ }
+
+ 
+ main.banner > div.slider div.navigation-manual > label.manual-btn,
+ div.navigation-auto > div {
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   margin: 30px 10px;
+ }
+ section.product > div{
+   width: 100%;
+ }
+
+}

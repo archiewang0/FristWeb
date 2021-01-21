@@ -1,0 +1,101 @@
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./common/load_more.css";
+@import "./common/main_product.css";
+@import "./common/page_title.css";
+@import "./common/recommend_bar.css"; 
+@import "./common/cursor.css";
+
+
+
+section.designer_section{
+  width:  100%;
+  
+  padding: 75px 51px 75px 75px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.designer_section > div.designer_block{ 
+  margin: 0 24px 24px 0;
+
+  width: calc(calc(100% / 4) - 24px );
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+div.designer_block>aside.top{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 裝四個圖片 */
+div.designer_block>aside.top>div.img_container{
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 個別圖片 */
+div.img_container>div.img_background{
+  width: 50%;
+  padding-top: 50%;
+
+  background-size: cover;
+}
+
+
+/* 資訊欄 */
+
+div.designer_block>aside.top>div.info{
+  width: 100%;
+  padding: 20px 0 10px 0 ;
+  position: relative;
+}
+
+/* 設計師照片 */
+
+div.designer_block>aside.top>div.info>div{
+  width: 75px; height: 75px;
+
+  border-radius: 100%;
+  position: absolute;
+  transform: translate(-50%,-110%) ;
+  overflow: hidden;
+
+  left: 50%;
+}
+
+
+div.designer_block>aside.top>div.info>div>img{
+  height: 100%;
+  max-width: none; max-height: none;
+}
+
+div.designer_block>aside.top>div.info>aside.right{
+  width: 100%;
+  line-height: 20px;
+}
+
+
+
+/* MORE>欄位 */
+div.designer_block>aside.bottom{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid black;
+}
+
+div.designer_block>aside.bottom>a{
+  font-size: 16px;
+  text-decoration: underline;
+  padding: 10px;
+  border-left: 1px solid black;
+}
