@@ -1,5 +1,5 @@
 const subtotal = document.querySelector("h6.subtotal_show");
-
+ 
 const colorInputChecked = document.querySelectorAll(
   "div.product_color div input"
 );

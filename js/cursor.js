@@ -15,6 +15,10 @@ const cursor = document.querySelector(".cursor");
 const svgCursor = document.getElementById("svgCursor");
 
 
+//動畫
+let timeLineChangeHoverCursor;
+
+
 
 if (window.innerWidth > 575) {
   console.log("work");
@@ -25,7 +29,7 @@ if (window.innerWidth > 575) {
   tlCursorToBig.stop();
 
   //cursor 變成別的pointer型式的動畫
-  const timeLineChangeHoverCursor = new TimelineMax();
+  timeLineChangeHoverCursor = new TimelineMax();
 
   timeLineChangeHoverCursor.add([
     TweenMax.to("div.cursor>svg#svgCursor", 0.2, { width: "0" }),
@@ -48,7 +52,7 @@ if (window.innerWidth > 575) {
   ]);
 
   timeLineChangeTextCursor.stop();
-
+ 
   //cursor跟著動
   document.onmousemove = (e) => {
     cursor.style.display = "block";
@@ -145,7 +149,6 @@ if (window.innerWidth > 575) {
     });
   });
 }
-
 
 //當視窗 調整大小時 
 //.onclick or onmousemove 可以被覆蓋 
