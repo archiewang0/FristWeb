@@ -63,7 +63,7 @@ main.main-product {
   
   main.main-product > div.grid > div.grid-item > a>span.info>div.top> p,hr{
     width: 100%;
-  }
+  } 
   
   main.main-product > div.grid > div.grid-item > a>span.info>div.top{
     height: 50%;

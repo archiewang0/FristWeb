@@ -1,9 +1,11 @@
 @import "./common/header.css";
 @import "./common/footer.css";
-@import "./common/back_icon.css";
+@import "./common/back_icon.css"; 
 
+@import "./common/cursor.css";
+@import "./common/sitemap.css";
+ 
 main.contact_us{
-
   width: 50%;
   margin: auto;
 }
@@ -62,4 +64,105 @@ main.contact_us>aside.bottom>form>textarea{
 main.contact_us>aside.bottom>form>button{
   margin: 20px 10px;
   width: calc(100% - 20px);
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px){
+  main.contact_us {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px){
+  main.contact_us {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  main.contact_us {
+    width: 65%;
+    margin-top: unset;
+  }
+  main.contact_us>aside.top{
+    margin: unset;
+  }
+  main.contact_us>aside.bottom{
+    margin-top: 10vh;
+  }
+  main.contact_us>aside.bottom>form{
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  main.contact_us {
+    width: 70%;
+    margin-top: unset;
+  }
+  main.contact_us>aside.top{
+    margin: unset;
+  }
+  main.contact_us>aside.bottom{
+    margin-top: 10vh;
+  }
+  main.contact_us>aside.bottom>form{
+    padding: 20px;
+  }
+  main.contact_us>aside.bottom>form>input{
+    margin: 20px 10px;
+  }
+  main.contact_us>aside.bottom>form>textarea{
+    height: 25vh;
+    margin: 25px 10px;
+  }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+  main.contact_us {
+    width: 80%;
+    margin-top: unset;
+  }
+  main.contact_us>aside.top{
+    margin: unset; margin-top: 20px;
+  }
+  main.contact_us>aside.bottom{
+    margin-top: 40px;
+  }
+  main.contact_us>aside.bottom>form{
+    padding: 20px;
+    margin: 20px 0;
+  }
+  main.contact_us>aside.bottom>form>input{
+    margin: 20px 10px;
+  }
+  main.contact_us>aside.bottom>form>textarea{
+    height: 25vh;
+    margin: 25px 10px;
+  }
+}
+
+@media screen and (max-width: 575px){
+  main.contact_us {
+    width: 95%;
+    margin-top: unset;
+  }
+  main.contact_us>aside.top{
+    margin: unset;     margin-top: 50px;
+  }
+  main.contact_us>aside.bottom{
+    margin-top: 50px;
+  }
+  main.contact_us>aside.bottom>form{
+    padding: 20px;
+    margin: 20px 0;
+  }
+  main.contact_us>aside.bottom>form>input{
+    margin: 15px 10px;
+    width: calc(100% - 20px);
+  }
+  main.contact_us>aside.bottom>form>textarea{
+    height: 25vh;
+    margin: 25px 10px;
+  }
 }

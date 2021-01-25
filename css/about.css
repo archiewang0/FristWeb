@@ -2,6 +2,8 @@
 @import "./common/footer.css";
 @import "./common/back_icon.css";
 
+@import "./common/cursor.css";
+
 section.about_parallax{
   position: relative;
   width: 100%;
@@ -14,7 +16,11 @@ section.about_parallax{
   /* border: 1px solid red; */
 }
 
-section.about_parallax>img:first-child{
+section.about_parallax>img#about_bg{
+  width: 100%;
+}
+
+section.about_parallax>img.about_text{
   position: absolute;
   top: 0;
   left: 0;
@@ -24,11 +30,12 @@ section.about_parallax>img:first-child{
   /* object-fit: cover; */
   /* pointer-events: none; */
 }
-
-section.about_parallax>img:last-child{
-  width: 100%;
-
+section.about_parallax>img.sm_img{
+  display: none;
 }
+
+
+
 
 
 main.about_content{
@@ -37,10 +44,15 @@ main.about_content{
   margin: auto;
   width: 100%;
   flex-wrap: wrap;
-  margin-bottom: 20vh;
   color: white;
   transform: translate(0,-50%);
   padding: 0 75px 75px 75px;
+}
+
+main.about_content>img{
+  width: 1200px;
+  /* transform: translate(0, -13%); */
+  margin-bottom: 50px;
 }
 
 main.about_content>h1{
@@ -72,8 +84,152 @@ div.other_page>a{
   font-weight: 900;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+
+  font-size: 50px;
 }
 div.other_page>a:last-child{
   justify-content: flex-end;
   border-left: 1px solid white;
 }
+
+
+
+@media screen and (min-width: 1441px) and (max-width: 1600px){
+  main.about_content>img{
+    width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px){
+  main.about_content>img{
+    width: 800px;
+  }
+  div.other_page>a{
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+
+  section.about_parallax>img.about_text{
+    display: none;
+  }
+  section.about_parallax>img.sm_img{
+    display: block;
+  } 
+
+  section.about_parallax>img#about_bg{
+    height: 300vh;
+    object-fit: cover;
+  }
+  main.about_content>img{
+    width: 600px;
+  }
+  div.other_page>a{
+    font-size: 36px;
+  }
+  main.about_content>h1{
+    line-height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+  section.about_parallax>img.about_text{
+    display: none;
+  }
+  section.about_parallax>img.sm_img{
+    display: block;
+  } 
+
+  section.about_parallax>img#about_bg{
+    height: 300vh;
+    object-fit: cover;
+  }
+  main.about_content>img{
+    width: 600px;
+  }
+  div.other_page>a{
+    font-size: 26px;
+  }
+  main.about_content>h1{
+    line-height: 60px;
+  }
+  main.about_content>p{
+    width: unset;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+  section.about_parallax>img.about_text{
+    display: none;
+  }
+  section.about_parallax>img.sm_img{
+    display: block;
+  } 
+
+  section.about_parallax>img#about_bg{
+    height: 300vh;
+    object-fit: cover;
+  }
+  main.about_content>img{
+    width: 600px;
+  }
+  div.other_page>a{
+    font-size: 22px;
+    padding: 50px;
+  }
+  main.about_content>h1{
+    line-height: 60px;
+  }
+  main.about_content>p{
+    width: unset;
+  }
+  main.about_content{
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 575px){
+  section.about_parallax>img.about_text{
+    display: none;
+  }
+  section.about_parallax>img.sm_img{
+    display: block;
+  } 
+
+  section.about_parallax>img#about_bg{
+    height: 350vh;
+    object-fit: cover;
+  }
+  main.about_content>img{
+    width: 600px;
+  }
+  div.other_page>a{
+    font-size: 14px;
+    padding: 40px 20px;
+  }
+  main.about_content>h1{
+    line-height: 60px;
+  }
+  main.about_content>p{
+    width: unset;
+  }
+  main.about_content{
+    padding: 20px;
+  }
+  div.other_page{
+    margin-bottom: 100px;
+  }
+}
+
+
+/* 
+  section.about_parallax>img.about_text{
+    display: none;
+  }
+  section.about_parallax>img.sm_img{
+    display: block;
+  } 
+  
+*/

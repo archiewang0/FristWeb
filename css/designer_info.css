@@ -4,8 +4,10 @@
 @import "./common/main_product.css";
 @import "./common/load_more.css";
 
+@import "./common/cursor.css";
+@import "./common/preload.css";  
 
-
+@import "./common/sitemap.css";
 
 /*************************************************/
 /* 三行式產品展示 */
@@ -16,8 +18,6 @@ main.main-product {
 
 main.main-product > div.grid > div.grid-item {
   width: calc(calc(100% / 3) - 10px);
-  margin: 0 5px 10px 5px;
-  background-color: black;
 
 }
 /* 三行式產品展示 */
@@ -31,72 +31,83 @@ main.designer_container {
   margin-top: 20px;
 }
 
-main.designer_container > aside.info_left {
+main.designer_container > div.info_left {
   width: 45%;
-  height: 900px;
+  height: 90vh;
 
   background-color: white;
   position: sticky;
   top: 75px;
 
   padding: 25px;
+  overflow: auto;
 }
 
-aside.info_left >section.page_title{
+/* div.info_left >section.page_title{
   width: 100%;
   margin-bottom: 20px;
-}
+} */
 
-aside.info_left > aside {
-  height: 50%;
+div.info_left > div {
   width: 100%;
-
+  height: 50%;
   display: flex;
   flex-wrap: wrap;
 }
 
-aside.info_left > aside > div.left > div {
-  width: 180px;
-  height: 180px;
-
-
-  border: 1px solid black;
-  background-image: url("../images/designer/designer5.jpg");
-  background-size: cover;
+div.info_left > div.top{
+  margin-bottom: 20px;
 }
 
-aside.info_left > aside > div.left {
+div.info_left > div.top > div.left{
+  display: unset;
+}
+
+div.info_left > div > div.left > div {
+  width: 100%;
+  padding-top: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+
+div.info_left > div > div.left > div >img{
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+div.info_left > div > div.left {
   display: inline-flex;
   width: 180px;
   justify-content: center;
 }
 
-aside.info_left > aside > div.right {
+div.info_left > div > div.right {
   display: inline-flex;
   flex-wrap: wrap;
   padding-left: 20px;
-  width: calc(100% - 180px);
+  width: calc(100% - 200px);
 }
 
-aside.info_left > aside > div.right > div.col1 {
+div.info_left > div > div.right > div.col1 {
   display: inline-flex;
   flex-wrap: wrap;
   height: 100px;
 }
 
-aside.info_left > aside > div.right > div.col1 > div {
+div.info_left > div > div.right > div.col1 > div {
   display: inline-flex;
   color: #0b2659;
   width: 100%;
 }
 
-aside.info_left > aside > div.right > div.col1 > div > div.name_row {
+div.info_left > div > div.right > div.col1 > div > div.name_row {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-aside.info_left > aside > div.right > div.col1 > div > div.name_row > div {
+div.info_left > div > div.right > div.col1 > div > div.name_row > div {
   display: flex;
 }
 
@@ -105,31 +116,31 @@ div.name_row > div > a.icon {
   margin-right: 0;
 }
 
-aside.info_left > aside > div.right > div.col2 {
+div.info_left > div > div.right > div.col2 {
   width: 100%;
+  margin-bottom: 20px;
 }
-aside.info_left > aside > div.right > div.col2 > hr {
+div.info_left > div > div.right > div.col2 > hr {
   margin-bottom: 10px;
 }
 
-aside.info_left > aside > div.right > div.col3 {
+div.info_left > div > div.right > div.col3 {
   font-size: 14px;
 }
 
 
 /* 資訊下面best sale */
-aside.info_left > aside.bottom > div.left > h5 {
+div.info_left > div.bottom > div.left > h5 {
   color: #0b2659;
 }
 
-aside.info_left > aside.bottom > div.right{
-  width: calc(100% - 180px);
+div.info_left > div.bottom > div.right{
     display: flex;
     flex-wrap: wrap;
     height: 100%;
 }
 
-aside.info_left > aside.bottom > div.right >a.sale_item{
+div.info_left > div.bottom > div.right >a.sale_item{
 
   width: 100%;
   display: flex;
@@ -139,6 +150,7 @@ aside.info_left > aside.bottom > div.right >a.sale_item{
   align-items: flex-start;
 
   border-bottom: 1px solid black;
+  margin-bottom: 20px;
 }
 
 a.sale_item > aside.left{
@@ -185,10 +197,394 @@ a.sale_item > aside.right{
 
 /* 右邊設計師產品展示區 */
 
-aside.product_right {
+div.product_right {
   /* border: 1px solid green; */
   width: 55%;
 }
 
 
 
+/*.................................................................................................................................*/
+/*...............RWD................................................................................................*/
+/*.................................................................................................................................*/
+
+
+@media screen and (min-width: 1441px) and (max-width: 1600px){
+  /* main.designer_container{
+    width: 95%;
+  } */
+  main.designer_container > div.info_left{
+    padding: 10px;
+  }
+  /* div.info_left > div{
+    height: unset;
+  } */
+  div.info_left > div > div.right > div.col1{
+    height: unset;
+    margin-bottom: 10px;
+  }
+  div.info_left > div > div.left{
+    width: 120px;
+  }
+  div.info_left > div.bottom > div.right >a.sale_item{
+    flex-wrap: nowrap;
+  }
+  a.sale_item > aside.right{
+    width: 40px;
+  }
+  div.info_left > div > div.right{
+    width: calc(100% - 120px);
+  }
+  /* div.info_left > div.bottom > div.right{
+    width: unset;
+  } */
+  div.info_left > div.top{
+    margin-bottom: 50px;
+  }
+  a.sale_item > aside.left>div.sale_num{
+    width: 50px;
+    height: 50px;
+  }
+  a.sale_item > aside.left>div.sale_num>h2{
+    line-height: 50px;
+    transform: scale(.8);
+  }
+  main.main-product > div.grid > div.grid-item{
+    width: calc(calc(100% / 2) - 10px);
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px){
+  /* main.designer_container{
+    width: 95%;
+  } */
+  main.designer_container > div.info_left{
+    padding: 15px;
+    width: 40%;
+  }
+
+  div.product_right{
+    width: 60%;
+  }
+  div.info_left > div{
+    height: unset;
+  }
+  div.info_left > div > div.right > div.col1{
+    height: unset;
+    margin-bottom: 10px;
+  }
+  div.info_left > div > div.left{
+    width: 120px;
+  }
+  div.info_left > div.bottom > div.right >a.sale_item{
+    flex-wrap: nowrap;
+  }
+  a.sale_item > aside.right{
+    width: 40px;
+  }
+  div.info_left > div > div.right{
+    /* width: calc(100% - 120px); */
+    width: 100%;
+    padding-left: unset;
+    margin-top: 20px;
+  }
+  /* div.info_left > div.bottom > div.right{
+    width: unset;
+  } */
+  div.info_left > div.top{
+    margin-bottom: 50px;
+  }
+  a.sale_item > aside.left>div.sale_num{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.product_info>img{
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.sale_num>h2{
+    line-height: 50px;
+    transform: scale(.8);
+  }
+  main.main-product > div.grid > div.grid-item{
+    width: calc(calc(100% / 2) - 10px);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  /* main.designer_container{
+    width: 95%;
+  } */
+  main.designer_container > div.info_left{
+    padding: 15px;
+    width: 40%;
+  }
+
+  div.product_right{
+    width: 60%;
+  }
+  div.info_left > div{
+    height: unset;
+  }
+  div.info_left > div > div.right > div.col1{
+    height: unset;
+    margin-bottom: 10px;
+  }
+  div.info_left > div > div.left{
+    width: 120px;
+  }
+  div.info_left > div.bottom > div.right >a.sale_item{
+    flex-wrap: nowrap;
+  }
+  a.sale_item > aside.right{
+    width: 40px;
+  }
+  div.info_left > div > div.right{
+    /* width: calc(100% - 120px); */
+    width: 100%;
+    padding-left: unset;
+    margin-top: 20px;
+  }
+  /* div.info_left > div.bottom > div.right{
+    width: unset;
+  } */
+  div.info_left > div.top{
+    margin-bottom: 50px;
+  }
+  a.sale_item > aside.left>div.sale_num{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.product_info>img{
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.sale_num>h2{
+    line-height: 50px;
+    transform: scale(.8);
+  }
+  main.main-product > div.grid > div.grid-item{
+    width: calc(calc(100% / 2) - 10px);
+  }
+  main.designer_container{
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+   /* main.designer_container{
+    width: 95%;
+  } */
+  main.designer_container > div.info_left{
+    padding: 15px;
+    width: 100%;
+    height: unset;
+    position: unset;
+    top: unset;
+    overflow: unset;
+  }
+
+  div.product_right{
+    width: 100%;
+    margin-top: 20px;
+  }
+  div.info_left > div{
+    height: unset;
+  }
+  div.info_left > div > div.right > div.col1{
+    height: unset;
+    margin-bottom: 10px;
+  }
+  div.info_left > div > div.left{
+    width: 120px;
+  }
+  div.info_left > div.bottom > div.right >a.sale_item{
+    flex-wrap: nowrap;
+  }
+  a.sale_item > aside.right{
+    width: 40px;
+  }
+  div.info_left > div > div.right{
+    /* width: calc(100% - 120px); */
+    width: 100%;
+    padding-left: unset;
+    margin-top: 20px;
+  }
+  /* div.info_left > div.bottom > div.right{
+    width: unset;
+  } */
+  div.info_left > div.top{
+    margin-bottom: 50px;
+  }
+  a.sale_item > aside.left>div.sale_num{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.product_info>img{
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.sale_num>h2{
+    line-height: 50px;
+    transform: scale(.8);
+  }
+  main.main-product > div.grid > div.grid-item{
+    width: calc(calc(100% / 2) - 10px);
+    margin: 0px 10px 10px 0px;
+  }
+
+
+  main.designer_container{
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  main.main-product{
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+   /* main.designer_container{
+    width: 95%;
+  } */
+  main.designer_container > div.info_left{
+    padding: 15px;
+    width: 100%;
+    height: unset;
+    position: unset;
+    top: unset;
+    overflow: unset;
+  }
+
+  div.product_right{
+    width: 100%;
+    margin-top: 20px;
+  }
+  div.info_left > div{
+    height: unset;
+  }
+  div.info_left > div > div.right > div.col1{
+    height: unset;
+    margin-bottom: 10px;
+  }
+  div.info_left > div > div.left{
+    width: 120px;
+  }
+  div.info_left > div.bottom > div.right >a.sale_item{
+    flex-wrap: nowrap;
+  }
+  a.sale_item > aside.right{
+    width: 40px;
+  }
+  div.info_left > div > div.right{
+    /* width: calc(100% - 120px); */
+    width: 100%;
+    padding-left: unset;
+    margin-top: 20px;
+  }
+  /* div.info_left > div.bottom > div.right{
+    width: unset;
+  } */
+  div.info_left > div.top{
+    margin-bottom: 50px;
+  }
+  a.sale_item > aside.left>div.sale_num{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.product_info>img{
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.sale_num>h2{
+    line-height: 50px;
+    transform: scale(.8);
+  }
+  main.main-product > div.grid > div.grid-item{
+    width: calc(calc(100% / 2) - 10px);
+    margin: 0px 10px 10px 0px;
+  }
+
+
+  main.designer_container{
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  main.main-product{
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 575px){
+   /* main.designer_container{
+    width: 95%;
+  } */
+  main.designer_container > div.info_left{
+    padding: 10px;
+    width: 100%;
+    height: unset;
+    position: unset;
+    top: unset;
+    overflow: unset;
+  }
+
+  div.product_right{
+    width: 100%;
+    margin-top: 20px;
+  }
+  div.info_left > div{
+    height: unset;
+  }
+  div.info_left > div > div.right > div.col1{
+    height: unset;
+    margin-bottom: 10px;
+  }
+  div.info_left > div > div.left{
+    width: 120px;
+  }
+  div.info_left > div.bottom > div.right >a.sale_item{
+    flex-wrap: nowrap;
+  }
+  a.sale_item > aside.right{
+    width: 40px;
+  }
+  div.info_left > div > div.right{
+    /* width: calc(100% - 120px); */
+    width: 100%;
+    padding-left: unset;
+    margin-top: 20px;
+  }
+  /* div.info_left > div.bottom > div.right{
+    width: unset;
+  } */
+  div.info_left > div.top{
+    margin-bottom: 50px;
+  }
+  a.sale_item > aside.left>div.sale_num{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.product_info>img{
+    margin-right: 10px;
+  }
+  a.sale_item > aside.left>div.sale_num>h2{
+    line-height: 50px;
+    transform: scale(.8);
+  }
+  main.main-product > div.grid > div.grid-item{
+    width: calc(calc(100% / 2) - 5px);
+    margin: 2.5px;
+  }
+  main.main-product{
+    padding: 2.5px;
+  }
+
+  main.designer_container{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  /* main.main-product{
+    padding-left: 10px;
+  } */
+}

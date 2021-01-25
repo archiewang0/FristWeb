@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./css/designer_info.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
+    <script src="./js/designer_info.js" defer></script>
     <script src="./js/header.js" defer></script>
     <script src="./js/preload.js" defer></script>
     <script src="./js/cursor.js" defer></script>
  
-    <script src="./js/jquery-3.5.1.js"></script>
+    <!-- <script src="./js/jquery-3.5.1.js"></script> -->
   </head>
   <body class="preload">
     <header id="nav-bar">
@@ -146,10 +147,12 @@
 
             <div class="row_body">
               <ul class="cart_list">
-                <li class="list_proudct">
+                <li class="empty_showout">
+                  YOUR CART KIND EMPTY,GO BACK SHOPPING
+                </li>
+                <!-- <li class="list_proudct">
                   <div class="item_img">
                     <img src="./images/cart_s_pic.jpg" alt="" />
-
                     <div class="item_info">
                       <div class="info_top">
                         <p>Leona Henderson</p>
@@ -180,194 +183,10 @@
                   <div class="item_price">100 NT$</div>
 
                   <div class="item_delete">
-                    <input type="button" value="Delete" id="cartItemDelBtn" />
+                    <input type="button" value="Delete" class="cartItemDelBtn" />
                   </div>
-                </li>
-
-                <li class="list_proudct">
-                  <div class="item_img">
-                    <img src="./images/cart_s_pic.jpg" alt="" />
-
-                    <div class="item_info">
-                      <div class="info_top">
-                        <p>Leona Henderson</p>
-                        <h4>Table lamp</h4>
-                      </div>
-                      <div class="info_bottom">
-                        <p>Size:</p>
-                        <p>Color:</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="item_quan">
-                    <div class="quan_outline">
-                      <input class="btn_sub" value="-" type="button" />
-                      <input
-                        class="quan_num"
-                        type="number"
-                        value="1"
-                        min="1"
-                        max="100"
-                      />
-                      <input class="btn_add" value="+" type="button" />
-                    </div>
-                  </div>
-
-                  <div class="item_price">100 NT$</div>
-
-                  <div class="item_delete">
-                    <input type="button" value="Delete" id="cartItemDelBtn" />
-                  </div>
-                </li>
-
-                <li class="list_proudct">
-                  <div class="item_img">
-                    <img src="./images/cart_s_pic.jpg" alt="" />
-
-                    <div class="item_info">
-                      <div class="info_top">
-                        <p>Leona Henderson</p>
-                        <h4>Table lamp</h4>
-                      </div>
-                      <div class="info_bottom">
-                        <p>Size:</p>
-                        <p>Color:</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="item_quan">
-                    <div class="quan_outline">
-                      <input class="btn_sub" value="-" type="button" />
-                      <input
-                        class="quan_num"
-                        type="number"
-                        value="1"
-                        min="1"
-                        max="100"
-                      />
-                      <input class="btn_add" value="+" type="button" />
-                    </div>
-                  </div>
-
-                  <div class="item_price">100 NT$</div>
-
-                  <div class="item_delete">
-                    <input type="button" value="Delete" id="cartItemDelBtn" />
-                  </div>
-                </li>
-
-                <li class="list_proudct">
-                  <div class="item_img">
-                    <img src="./images/cart_s_pic.jpg" alt="" />
-
-                    <div class="item_info">
-                      <div class="info_top">
-                        <p>Leona Henderson</p>
-                        <h4>Table lamp</h4>
-                      </div>
-                      <div class="info_bottom">
-                        <p>Size:</p>
-                        <p>Color:</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="item_quan">
-                    <div class="quan_outline">
-                      <input class="btn_sub" value="-" type="button" />
-                      <input
-                        class="quan_num"
-                        type="number"
-                        value="1"
-                        min="1"
-                        max="100"
-                      />
-                      <input class="btn_add" value="+" type="button" />
-                    </div>
-                  </div>
-
-                  <div class="item_price">100 NT$</div>
-
-                  <div class="item_delete">
-                    <input type="button" value="Delete" id="cartItemDelBtn" />
-                  </div>
-                </li>
-
-                <li class="list_proudct">
-                  <div class="item_img">
-                    <img src="./images/cart_s_pic.jpg" alt="" />
-
-                    <div class="item_info">
-                      <div class="info_top">
-                        <p>Leona Henderson</p>
-                        <h4>Table lamp</h4>
-                      </div>
-                      <div class="info_bottom">
-                        <p>Size:</p>
-                        <p>Color:</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="item_quan">
-                    <div class="quan_outline">
-                      <input class="btn_sub" value="-" type="button" />
-                      <input
-                        class="quan_num"
-                        type="number"
-                        value="1"
-                        min="1"
-                        max="100"
-                      />
-                      <input class="btn_add" value="+" type="button" />
-                    </div>
-                  </div>
-
-                  <div class="item_price">100 NT$</div>
-
-                  <div class="item_delete">
-                    <input type="button" value="Delete" id="cartItemDelBtn" />
-                  </div>
-                </li>
-
-                <li class="list_proudct">
-                  <div class="item_img">
-                    <img src="./images/cart_s_pic.jpg" alt="" />
-
-                    <div class="item_info">
-                      <div class="info_top">
-                        <p>Leona Henderson</p>
-                        <h4>Table lamp</h4>
-                      </div>
-                      <div class="info_bottom">
-                        <p>Size:</p>
-                        <p>Color:</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="item_quan">
-                    <div class="quan_outline">
-                      <input class="btn_sub" value="-" type="button" />
-                      <input
-                        class="quan_num"
-                        type="number"
-                        value="1"
-                        min="1"
-                        max="100"
-                      />
-                      <input class="btn_add" value="+" type="button" />
-                    </div>
-                  </div>
-
-                  <div class="item_price">100 NT$</div>
-
-                  <div class="item_delete">
-                    <input type="button" value="Delete" id="cartItemDelBtn" />
-                  </div>
-                </li>
+                </li> -->
+              
               </ul>
             </div>
 
@@ -533,7 +352,7 @@
       </div>
       <!-- 這是navbar -->
     </header>
-
+ 
     <div class="cursor">
       <div class="cursorPointer"></div>
       <div class="cursortext"></div>
@@ -576,6 +395,14 @@
         />
       </svg>
     </div>
+
+    <p class="page_siteMap">
+      <a href="./index.html">INDEX ></a>
+      <a href="./designers.html">DESIGNER: Bag ></a>
+      <a href="#">Betty Abbadie</a>
+    </p>
+
+
     <div class="back_icon">
       <a href="./products.html">
         <img src="./images/icons/back_icon-23.svg" alt="" />
@@ -584,18 +411,12 @@
     </div>
 
     <main class="designer_container">
-      <aside class="info_left">
-        <section class="page_title">
-          <p class="page_siteMap">
-            <a href="./index.html">INDEX > </a>
-            <a href="./designers.html"> DESIGNER: Bag > </a>
-            <a href="./designer_info.html"> Betty Abbadie </a>
-          </p>
-        </section>
-
-        <aside class="top">
+      <div class="info_left">
+        <div class="top">
           <div class="left">
-            <div></div>
+            <div>
+              <img src="./images/designer/designer5.jpg" alt="">
+            </div>
           </div>
 
           <div class="right">
@@ -629,9 +450,9 @@
               並與當時數位同學創建某知名的工作室，也有進行數位學校擔任設計講師。
             </div>
           </div>
-        </aside>
+        </div>
 
-        <aside class="bottom">
+        <div class="bottom">
           <div class="left">
             <h5>Best Sale</h5>
           </div>
@@ -708,327 +529,328 @@
               </aside>
             </a>
           </div>
-        </aside>
-      </aside>
+        </div>
+      </div>
 
-      <aside class="product_right">
+      <div class="product_right">
         <main class="main-product">
           <div class="grid">
             <div class="grid-item">
               <a href="./product_info.html">
-                <span class="info">
-                  <aside class="top">
-                    <p>Designer</p>
-                    <h4>Bag-01</h4>
-                    <span class="tag"> (Bag) </span>
-                    <hr />
-                  </aside>
-
-                  <aside class="bottom">
-                    <h5>100000</h5>
-                    <h5>NT$</h5>
-                  </aside>
-                </span>
                 <img
                   src="./images/product_imgs/knitwear_cardigan_cashmere_brown_1.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
+    
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img src="./images/product_imgs/5f00209a79f96.jpg" alt="" />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/8850539_Afteroom_Lounge_Chair_Afteroom_Black_03.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/8e80e7_96e2abc235c541cc813b704e1.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/a-cold-wall_focus_leather_trio-3.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/a7e7cae3-6f49-49f2-b9c5-0242b882d870_LARGE.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/a_cold_wall-acw-converse-onyx-fo1.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/a_cold_wall-acw-converse-onyx-fo2.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/a_cold_wall-acw-converse-onyx-foe.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img src="./images/product_imgs/app001prod (3).jpg" alt="" />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img src="./images/product_imgs/app001prod (7).jpg" alt="" />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img src="./images/product_imgs/app001prod.jpg" alt="" />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/ea8013a4-c4fe-4de4-bb63-55494e307a9f_LARGE.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/f534e59f-5d57-472a-9781-20818d5b614e_LARGE.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-
-            <div class="grid-item">
-              <a href="">
                 <span class="info">
-                  <aside class="top">
+                  <div class="top">
                     <p>Designer</p>
                     <h4>Bag-01</h4>
                     <span class="tag"> (Bag) </span>
                     <hr />
-                  </aside>
-
-                  <aside class="bottom">
+                  </div>
+    
+                  <div class="bottom">
                     <h5>100000</h5>
                     <h5>NT$</h5>
-                  </aside>
+                  </div>
                 </span>
+              </a>
+            </div>
+    
+            <div class="grid-item">
+              <a href="">
                 <img
                   src="./images/product_imgs/fear-of-god-ermenegildo-zegna-black-logo-cap (1).jpg"
                   alt=""
                 />
+                <span class="info">
+                  <div class="top">
+                    <p>Designer</p>
+                    <h4>Bag-01</h4>
+                    <span class="tag"> (Bag) </span>
+                    <hr />
+                  </div>
+    
+                  <div class="bottom">
+                    <h5>100000</h5>
+                    <h5>NT$</h5>
+                  </div>
+                </span>
               </a>
             </div>
           </div>
@@ -1043,7 +865,7 @@
             <h1 class="button-title">LOAD MORE</h1>
           </button>
         </section>
-      </aside>
+      </div>
     </main>
 
     <footer>
@@ -1059,39 +881,26 @@
         </a>
       </div>
       <div class="footer-row row2">
-        <div class="vertical-line"></div>
         <div class="footer-siemap-container">
           <div class="inner-row">
             <div class="title-container">
-              <h6>
-                <a href=""> PRODUCT </a>
-              </h6>
+              <a href="">
+                <h6>PRODUCT</h6>
+              </a>
             </div>
 
             <ul class="product-option">
-              <li>
-                <a href=""> Bag </a>
-              </li>
+              <li>Bag</li>
 
-              <li>
-                <a href=""> Hat </a>
-              </li>
+              <li>Hat</li>
 
-              <li>
-                <a href=""> Shoes </a>
-              </li>
+              <li>Shoes</li>
 
-              <li>
-                <a href=""> Pants </a>
-              </li>
+              <li>Pants</li>
 
-              <li>
-                <a href=""> Other </a>
-              </li>
+              <li>Other</li>
 
-              <li>
-                <a href=""> clothes </a>
-              </li>
+              <li>clothes</li>
             </ul>
           </div>
 
@@ -1142,7 +951,24 @@
     </footer>
 
     <!-- 瀑布流 -->
-    <script src="./js/masonry.pkgd.min.js"></script>
-    <script src="./js/masonry.js"></script>
+    <script src="./js/Isotope.js"></script>
+    <script src="./js/imagesLoaded.js"></script>
+    <script>
+      //抓取container
+      var grid = document.querySelector(".grid");
+ 
+      var iso = new Isotope(grid, {
+        itemSelector: ".grid-item", //裡面的物件
+        percentPosition: true,
+        // masonry: {
+        //   columnWidth: '.grid-sizer'
+        // }
+      });
+
+      imagesLoaded(grid).on("progress", function () {
+        // layout Isotope after each image loads
+        iso.layout();
+      });
+    </script>
   </body>
 </html>

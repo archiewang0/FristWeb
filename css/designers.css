@@ -7,17 +7,19 @@
 @import "./common/cursor.css";
 
 
+@import "./common/sitemap.css";
+
 
 section.designer_section{
   width:  100%;
   
-  padding: 75px 51px 75px 75px;
+  padding: 75px 63px 75px 63px;
   display: flex;
   flex-wrap: wrap;
 }
 
-section.designer_section > div.designer_block{ 
-  margin: 0 24px 24px 0;
+section.designer_section > a.designer_block{ 
+  margin: 0 12px 24px 12px;
 
   width: calc(calc(100% / 4) - 24px );
   background-color: white;
@@ -28,7 +30,7 @@ section.designer_section > div.designer_block{
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-div.designer_block>aside.top{
+a.designer_block>div.top{
   width: 100%;
   padding: 10px;
   display: flex;
@@ -36,24 +38,31 @@ div.designer_block>aside.top{
 }
 
 /* 裝四個圖片 */
-div.designer_block>aside.top>div.img_container{
+a.designer_block>div.top>div.img_container{
   width: 100%;
   
   display: flex;
   flex-wrap: wrap;
 }
+
 /* 個別圖片 */
 div.img_container>div.img_background{
   width: 50%;
   padding-top: 50%;
 
   background-size: cover;
+  position: relative;
+}
+
+div.img_container>div.img_background>img{
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); 
+  width: 100%; height: 100%; object-fit: cover; 
 }
 
 
 /* 資訊欄 */
 
-div.designer_block>aside.top>div.info{
+a.designer_block>div.top>div.info{
   width: 100%;
   padding: 20px 0 10px 0 ;
   position: relative;
@@ -61,7 +70,7 @@ div.designer_block>aside.top>div.info{
 
 /* 設計師照片 */
 
-div.designer_block>aside.top>div.info>div{
+a.designer_block>div.top>div.info>div{
   width: 75px; height: 75px;
 
   border-radius: 100%;
@@ -73,12 +82,12 @@ div.designer_block>aside.top>div.info>div{
 }
 
 
-div.designer_block>aside.top>div.info>div>img{
+a.designer_block>div.top>div.info>div>img{
   height: 100%;
   max-width: none; max-height: none;
 }
 
-div.designer_block>aside.top>div.info>aside.right{
+a.designer_block>div.top>div.info>main.right{
   width: 100%;
   line-height: 20px;
 }
@@ -86,16 +95,95 @@ div.designer_block>aside.top>div.info>aside.right{
 
 
 /* MORE>欄位 */
-div.designer_block>aside.bottom{
+a.designer_block>div.bottom{
   width: 100%;
   display: flex;
   justify-content: flex-end;
   border-top: 1px solid black;
 }
 
-div.designer_block>aside.bottom>a{
+a.designer_block>div.bottom>div{
   font-size: 16px;
   text-decoration: underline;
   padding: 10px;
   border-left: 1px solid black;
+}
+
+
+@media screen and (min-width: 1441px) and (max-width: 1600px){
+  section.designer_section{
+    padding: 50px 63px 50px 63px;;
+  }
+  section.designer_section > a.designer_block{
+    margin: 0 6px 12px 6px;
+    width: calc(calc(100% / 4) - 12px );
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px){ 
+  section.designer_section{
+    padding: 0 14px 50px 14px;;
+  }
+  section.designer_section > a.designer_block{
+    margin: 0 6px 12px 6px;
+    width: calc(calc(100% / 4) - 12px );
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  section.designer_section{
+    padding: 0 14px 50px 14px;;
+  }
+  section.designer_section > a.designer_block{
+    margin: 0 6px 12px 6px;
+    width: calc(calc(100% / 3) - 12px );
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  section.designer_section{
+    padding: 0 14px 50px 14px;;
+  }
+  section.designer_section > a.designer_block{
+    margin: 0 6px 12px 6px;
+    width: calc(calc(100% / 3) - 12px );
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+  section.designer_section{
+    padding: 0 14px 50px 14px;;
+  }
+  section.designer_section > a.designer_block{
+    margin: 0 6px 12px 6px;
+    width: calc(calc(100% / 2) - 12px );
+  }
+  a.designer_block>div.top>div.info>div{
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 575px){
+  section.designer_section{
+    padding: 0 5px 50px 5px;;
+  }
+  section.designer_section > a.designer_block{
+    margin: 0 6px 12px 6px;
+    width: 100%;
+  }
+  a.designer_block>div.top>div.info>div{
+    width: 65px;
+    height: 65px;
+  }
+  div.img_container>div.img_background:first-child,
+  div.img_container>div.img_background:nth-child(2){
+    display: none;
+  }
+  a.designer_block>div.bottom {
+    justify-content: center;
+  }
+  a.designer_block>div.bottom>div{
+    border-left: unset;
+  }
 }

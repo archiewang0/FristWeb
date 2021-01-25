@@ -158,7 +158,7 @@ main.product_container > div.product_right {
 
 main.product_container > div.product_right > form.product_right_info {
   width: 680px;
-  height: 85vh;
+  height: 90vh;
 
   padding: 20px;
 
@@ -168,7 +168,7 @@ main.product_container > div.product_right > form.product_right_info {
   flex-wrap: wrap;
 
   position: sticky; /*固定在div.product_right範圍裏面*/
-  top: 120px; /*固定在div.product_right範圍裏面*/
+  top: 75px; /*固定在div.product_right範圍裏面*/
   overflow: auto;
 }
 

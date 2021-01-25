@@ -11,7 +11,7 @@
   width: 10px;
 }
 
-/* Track */
+/* Track */ 
 ::-webkit-scrollbar-track {
   background: #e7e7e7;
 }
@@ -1449,6 +1449,9 @@ div.sm_search_form
   div#member > div.memberForm {
     width: 60%;
   }
+  h1.button-title {
+    font-size: 46px;
+  }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
@@ -1545,6 +1548,9 @@ div.sm_search_form
   }
   div.row_bottom {
     padding: unset;
+  }
+  h1.button-title {
+    font-size: 46px;
   }
 }
 
@@ -1833,6 +1839,9 @@ div.sm_search_form
   h1 {
     font-size: 40px;
   }
+  h2 {
+    font-size: 36px;
+  }
   h3 {
     font-size: 24px;
   }
@@ -1844,10 +1853,10 @@ div.sm_search_form
   }
 
   h1.button-title {
-    font-size: 36px;
+    font-size: 32px;
   }
   button {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   /* cart滿版 */
@@ -2083,7 +2092,7 @@ div.sm_search_form
     font-size: 32px;
   }
   h2 {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   h3 {

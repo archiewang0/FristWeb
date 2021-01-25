@@ -66,6 +66,14 @@ section.load-section{
   /*************************************************************************/
   /************************load more 載入更多區域***************************/
   /*************************************************************************/
+
+
+
+  @media screen and (min-width: 1441px) and (max-width: 1600px){
+    section.load-section>button{
+      padding: 20px 40px;
+    }
+  }
   
   @media screen and (max-width: 575px){
     section.load-section>button{

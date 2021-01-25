@@ -295,3 +295,8 @@ previewImgs.forEach((e) => {
   e.addEventListener("click", changeImgHandler);
   e.addEventListener("click", changeNumber);
 });
+
+
+// const productInfo = document.querySelector("form.product_right_info");
+
+// productInfo.style.top = `${productInfo.getBoundingClientRect().top}px`;
