@@ -43,6 +43,7 @@ main.main-product {
     width: 100%;
   
     transition: .5s;
+    object-fit: cover;
   }
   
   
