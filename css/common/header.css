@@ -203,7 +203,7 @@ header > div.nav-position {
   display: block;
   position: relative;
   height: 55px;
-  z-index: 2;
+  z-index: 10;
 }
 
 header > div.nav-position > nav.nav-info {
@@ -240,7 +240,7 @@ header > div.nav-position > nav.nav-info > div.first-row {
 }
 header > div.nav-position > nav.nav-info > div.second-row {
   margin-top: 55px;
-
+  position: relative;
   width: 100%;
 }
 
@@ -412,7 +412,7 @@ header > div.nav-position > nav.fixed {
 
   padding: 12px;
   box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.05);
-  z-index: 1;
+  z-index: 10;
 }
 
 header > div.nav-position > nav.fixed > div.nav {
@@ -629,7 +629,7 @@ div#menu {
 }
 
 div#menu.menu_show {
-  z-index: 2;
+  z-index: 20;
   opacity: 1;
   transform: translate(0, 0);
 
@@ -716,6 +716,18 @@ div#menu > div.menuListBG > ul.menu_ul > li {
   flex-wrap: wrap;
   width: 100%;
 }
+/* ------------------------------------------------------------------------------------------- */
+/* 目前位置 */
+ul.menu_ul> li.thereYouAre{
+  background-color: #ffffff; 
+  pointer-events: none;
+}
+
+ul.menu_ul> li.thereYouAre > a{
+  color: rgb(226, 226, 226)  !important;
+}
+  /* ------------------------------------------------------------------------------------------- */
+/* 目前位置 */
 
 /* div#menu > div.menuListBG > ul.menu_ul > li > a > h1 {
   z-index: 1;
@@ -826,7 +838,7 @@ div#cart {
 /*...............cart show 出來 ..................................................................................................*/
 
 div#cart.cart_show {
-  z-index: 2;
+  z-index: 20;
   opacity: 1;
   transform: translate(0, 0);
 
@@ -1137,7 +1149,7 @@ div#member {
 }
 
 div#member.member_show {
-  z-index: 2;
+  z-index: 20;
   opacity: 1;
   transform: translate(0, 0);
 
@@ -1281,7 +1293,7 @@ div#sm_search {
 }
 
 div#sm_search.search_show {
-  z-index: 2;
+  z-index: 20;
   opacity: 1;
   transform: translate(0, 0);
 
@@ -2516,5 +2528,12 @@ div.sm_search_form
 
   div#cart > form.cartForm > div.row_body > ul.cart_list >li.empty_showout{
     font-size: 20px;
+  }
+  div#menu > div.menuListBG > ul.menu_ul > li > a:hover{
+    background-color: white;
+    color: #0b2659;
+  }
+  div#menu > div.menuListBG > ul.menu_ul > li > a:hover > div.menu-icon{
+    width: unset;
   }
 }

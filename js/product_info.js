@@ -1,3 +1,23 @@
+
+//抓取購物車裡面放 subtotal 的地方
+let cart_subtotal = 0;
+
+const renderProdsSubtoal = function(){
+	const prods = [...document.querySelector('ul.cart_list').children]
+	cart_subtotal = 0
+
+	if(prods.length >= 2){
+		for(let idx = 1 ; idx < prods.length ; idx++){
+			let prise =     parseInt([...prods[idx].children][2].innerHTML) ;
+			cart_subtotal += prise;
+
+		}
+	} 
+	return cart_subtotal
+}
+
+
+
 const subtotal = document.querySelector("h6.subtotal_show");
  
 const colorInputChecked = document.querySelectorAll(
@@ -37,8 +57,7 @@ product_cartBtnSub.addEventListener("click", () => {
 const addToCart = document.getElementById("add_to_cart");
 const cartList = document.querySelector("ul.cart_list");
 
-//抓取購物車裡面放 subtotal 的地方
-let cart_subtotal = 0;
+
 
 //點擊加入購物車
 addToCart.addEventListener("click", (e) => {
@@ -128,48 +147,52 @@ addToCart.addEventListener("click", (e) => {
   const newAddProdBtnAdd = prodEl.querySelector("input.btn_add");
   const newQuanNum = prodEl.querySelector("input.quan_num");
 
-  let itemPrice = prodEl.querySelector("div.item_price").innerHTML;
-  itemPrice = itemPrice.split(" ").shift();
+  let itemPrice = document.querySelector('div.product_price > div.right>h6').innerHTML
 
-  //買次典籍addtocart 新的內容會加過來
-  cart_subtotal = cart_subtotal + parseInt(itemPrice);
-  //並且show 在cart 的subtotal
-  document.querySelector(
-    "div.row_subtotal > h4:last-child"
-  ).innerHTML = `${cart_subtotal} NT$`;
+
+  const getPrice = renderProdsSubtoal()
+
+	
+	//並且show 在cart 的subtotal
+  document.querySelector('div.row_subtotal > h4:last-child').innerHTML = `${getPrice} NT$`
 
   let prodListSubtotal; //清單上面顯示價位
 
-  //抓取cart 的subtotal
-
-  // console.log(cart_subtotal);
 
   newAddProdBtnAdd.onclick = () => {
     newQuanNum.stepUp(1);
 
     //點擊成與input的value
-    prodListSubtotal = parseInt(itemPrice) * newQuanNum.value;
+	prodListSubtotal = parseInt(itemPrice) * newQuanNum.value;
+	
+
+	 
     //顯示在上面
     prodEl.querySelector(
       "div.item_price"
     ).innerHTML = `${prodListSubtotal} NT$`;
 
-    //之前數目 在 增加的數目
-    cart_subtotal = prodListSubtotal;
-    //並且show 在cart 的subtotal
-    document.querySelector(
-      "div.row_subtotal > h4:last-child"
-    ).innerHTML = `${cart_subtotal} NT$`;
+		const getPrice = renderProdsSubtoal()
+
+    document.querySelector('div.row_subtotal > h4:last-child').innerHTML = `${getPrice} NT$`
   };
 
   newAddProdBtnSub.onclick = () => {
     newQuanNum.stepDown(1);
 
-    prodListSubtotal = parseInt(itemPrice) * newQuanNum.value;
+	prodListSubtotal = parseInt(itemPrice) * newQuanNum.value
+	
 
     prodEl.querySelector(
       "div.item_price"
-    ).innerHTML = `${prodListSubtotal} NT$`;
+	).innerHTML = `${prodListSubtotal} NT$`;
+
+
+		const getPrice = renderProdsSubtoal()
+
+	
+		document.querySelector('div.row_subtotal > h4:last-child').innerHTML = `${getPrice} NT$`
+
   };
 
   //抓取delete button
@@ -187,7 +210,10 @@ addToCart.addEventListener("click", (e) => {
     } else {
       [...cartList.children][0].style.display = "none";
       // console.log('work2')
-    }
+	}
+	const getPrice = renderProdsSubtoal()
+
+    document.querySelector('div.row_subtotal > h4:last-child').innerHTML = `${getPrice} NT$`
   };
 
   //新的內容 也要註冊cursor

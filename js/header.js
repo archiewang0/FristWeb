@@ -161,9 +161,7 @@ const labelRegister = document.querySelector('div.row1>label[for="register"]');
 const labelLogin = document.querySelector('div.row1>label[for="login"]');
 
 login.onclick = function () {
-  console.log("work");
   if (login.checked === true) {
-    console.log("work2");
     labelLogin.classList.add("label-on");
     labelRegister.classList.remove("label-on");
 
@@ -202,7 +200,7 @@ for (var i = 0; i < searchInputs.length; i++) {
     setTimeout(() => {
       searchFocusOptions[0].style.display = "none";
       searchFocusOptions[1].style.display = "none";
-    }, 100);
+    }, 150);
   };
 }
 

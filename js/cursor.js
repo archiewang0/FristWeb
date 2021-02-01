@@ -1,5 +1,5 @@
 //抓取全部的a 標籤
-const TAG_As = document.querySelectorAll("a");
+const TAG_As = document.querySelectorAll("a"); 
 const TAG_SELECTs = document.querySelectorAll("select");
 const TAG_BUTTONs = document.querySelectorAll("button");
 const TAG_INPUTs_BUTTON = document.querySelectorAll('input[type="button"]');
@@ -23,7 +23,7 @@ let timeLineChangeHoverCursor;
 if (window.innerWidth > 575) {
   console.log("work");
 
-  //cursor 變大的動畫
+  //cursor 變大的動畫 
   const tlCursorToBig = new TimelineMax();
   tlCursorToBig.to("div.cursor", 0.3, { scale: 1.2 });
   tlCursorToBig.stop();
@@ -40,7 +40,7 @@ if (window.innerWidth > 575) {
   ]);
   timeLineChangeHoverCursor.stop();
 
-  //cursor 變成別的text刑事的動畫
+  //cursor 變成別的text刑事的動畫 
   const timeLineChangeTextCursor = new TimelineMax();
 
   timeLineChangeTextCursor.add([
@@ -66,7 +66,7 @@ if (window.innerWidth > 575) {
   });
   document.addEventListener("mouseleave", () => {
     cursor.style.display = "none";
-  });
+  }); 
 
   //當滑鼠點擊時 後造成cursor 全部放大
   document.addEventListener("click", () => {

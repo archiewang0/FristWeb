@@ -35,6 +35,13 @@ section.about_parallax>img.sm_img{
 }
 
 
+section.about_parallax>div.animateBlock{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:  #0b2659;
+  bottom: 0;
+}
 
 
 
@@ -91,6 +98,8 @@ div.other_page>a:last-child{
   justify-content: flex-end;
   border-left: 1px solid white;
 }
+
+
 
 
 
@@ -191,7 +200,7 @@ div.other_page>a:last-child{
 }
 
 @media screen and (max-width: 575px){
-  section.about_parallax>img.about_text{
+  section.about_parallax>img.about_text{ 
     display: none;
   }
   section.about_parallax>img.sm_img{
@@ -199,7 +208,7 @@ div.other_page>a:last-child{
   } 
 
   section.about_parallax>img#about_bg{
-    height: 350vh;
+    height: 200vh;
     object-fit: cover;
   }
   main.about_content>img{

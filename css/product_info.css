@@ -757,6 +757,7 @@ div.pd_quan_outline > input.btn_add {
   }
   form.product_right_info > div.product_size > div.right > label {
     height: 30px;
+    margin: 5px 0;
   }
   form.product_right_info > div.product_size > div.right > label > p {
     padding: 5px;

@@ -13,6 +13,10 @@ header > div.nav-position.--on_top{
   height: unset;
 } */
 
+
+
+
+
 header > div.nav-position.--on_top > nav.fixed > div > a.logo-container {
   width: 0;
 }
@@ -25,7 +29,7 @@ header > div.nav-position.--on_top > nav.nav-info {
   position: absolute;
   background-color: white;
 }
-
+ 
 /***將滾動最上讓logo消失的 class 存放在index裡面
 這樣只有 index 會有這個特效**/
 
@@ -41,19 +45,15 @@ header > div.nav-position.--on_top > nav.nav-info {
   }
 }
 
-/* body {
-  height: 4000px;
-} */
- 
+
+
+
 /*********************遮擋破格icon******************************************/
 
 div#container {
   overflow: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 /*************************************************************************/
 /*****************************bnanner區域*********************************/
@@ -74,6 +74,7 @@ main.banner > div.slider > div.slides {
   width: 300vw;
   transition: 1.5s;
   display: flex;
+  background: #0b2659;
 }
 
 main.banner > div.slider > input {
@@ -83,9 +84,11 @@ main.banner > div.slider > input {
 /* 可以在這裡設立 尺寸來裁切 */
 main.banner > div.slider > div.slides > div.slide {
   transition: 1.5s;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  /* height: 80vh; */
+  height: 85vh;
   overflow: hidden;
   position: relative;
 }
@@ -100,6 +103,7 @@ main.banner > div.slider > div.slides > div.slide > img {
   object-fit: cover;
   object-position: center;
 
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
 main.banner > div.slider div.navigation-manual,
@@ -135,6 +139,7 @@ main.banner > div.slider div.navigation-manual > label.manual-btn:hover {
 }
 
 
+
 /* 輪播的時候 check slides 跑多少 */
 #radio1:checked ~ .slides {
   transform: translate(0, 0);
@@ -147,6 +152,7 @@ main.banner > div.slider div.navigation-manual > label.manual-btn:hover {
 #radio3:checked ~ .slides {
   transform: translate(-66.66%, 0);
 }
+
 
 #radio1:checked ~ div.navigation-auto > div.auto-btn1 {
   color: rgb(255, 255, 255);
@@ -196,6 +202,16 @@ main.banner-position > div.banner-content {
  div.banner-content > div.left > h1 {
   line-height: 80px;
 }
+
+/* div.banner-content > div.left > div.title_cover{
+  position: absolute;
+  width: 0;
+  height: 140%;
+  background-color: #0b2659;
+  top: -3vw;
+  left: 0;
+} */
+
  div.banner-content > div.left > h1::before {
   content: "新品上架";
   font-family: Arial, Helvetica, sans-serif;
@@ -324,6 +340,33 @@ p {
 /*************************************************************************/
 
 
+
+
+nav > div.second-row >img.ani-font{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  fill: #0b2659;
+  height: 100%;
+
+  transform: translate(-50%,0) rotateX(90deg);
+  transform-origin: bottom;
+}
+
+nav > div.second-row> img.main{
+  transform-origin: bottom;
+}
+
+div.ani-cover{
+  position: fixed;
+  background-color: #0b2659;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+
+  /* transform: rotate(180deg); */
+  bottom: 0px;
+}
 
 /****************************************************************************************************************************/
 /**************************RWD 專區 ***************************************************************************************/
@@ -986,3 +1029,5 @@ p {
  }
 
 }
+
+
