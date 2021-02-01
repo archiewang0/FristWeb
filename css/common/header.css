@@ -4,8 +4,13 @@
   cursor: none !important;
 }
 
-/* ................iphone defalut 調整........................ */
 
+
+
+/* ................iphone defalut 調整........................ */
+.reset {
+  -webkit-appearance: none; 
+}
 
 input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; }
 

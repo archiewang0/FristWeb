@@ -1,200 +1,188 @@
-
 /*************************************************************************/
 /************************main-prouct 主要產品區域*************************/
 /*************************************************************************/
 
-
 main.main-product {
     padding: 75px;
-  }
-  
-  
-  
-  /* main.main-product > div.grid {
+}
+
+/* main.main-product > div.grid {
   } */
-  
-  main.main-product > div.grid > div.grid-item {
+
+main.main-product > div.grid > div.grid-item {
     width: calc(20% - 10px);
     margin: 0 5px 10px 5px;
     background-color: black;
-  
-  }
-  
-  main.main-product > div.grid > div.grid-item:hover img{
-    opacity: .5;
-  }
-  
-  main.main-product > div.grid > div.grid-item:hover>a>span.info{
+}
+
+main.main-product > div.grid > div.grid-item:hover img {
+    opacity: 0.5;
+}
+
+main.main-product > div.grid > div.grid-item:hover > a > span.info {
     opacity: 1;
-  }
-  
-  main.main-product > div.grid > div.grid-item > a{
+}
+
+main.main-product > div.grid > div.grid-item > a {
     position: relative;
     display: inline-flex;
     flex-wrap: wrap;
-
+    align-items: flex-start;
     width: 100%;
-  }
-  
-  
-  main.main-product > div.grid > div.grid-item > a > img {
+}
+
+main.main-product > div.grid > div.grid-item > a > img {
     opacity: 1;
     display: block;
     width: 100%;
-  
-    transition: .5s;
+
+    transition: 0.5s;
     object-fit: cover;
-  }
-  
-  
-  main.main-product > div.grid > div.grid-item > a>span.info{
+}
+
+main.main-product > div.grid > div.grid-item > a > span.info {
     position: absolute;
     /* display: flex; */
     width: 100%;
     height: 100%;
     padding: 10px;
-  
+
     opacity: 0;
-  }
-  
-  div.grid > div.grid-item > a>span.info> p,h4,hr,span{
+}
+
+div.grid > div.grid-item > a > span.info > p,
+h4,
+hr,
+span {
     display: block;
     color: white;
-  }
-  
-  main.main-product > div.grid > div.grid-item > a>span.info>div.top> p,hr{
+}
+
+main.main-product > div.grid > div.grid-item > a > span.info > div.top > p,
+hr {
     width: 100%;
-  } 
-  
-  main.main-product > div.grid > div.grid-item > a>span.info>div.top{
+}
+
+main.main-product > div.grid > div.grid-item > a > span.info > div.top {
     height: 50%;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
-  }
-  
-  main.main-product > div.grid > div.grid-item > a>span.info>div.top> h4,span.tag{
+}
+
+main.main-product > div.grid > div.grid-item > a > span.info > div.top > h4,
+span.tag {
     display: inline;
-  }
-  main.main-product > div.grid > div.grid-item > a>span.info>div.top> span{
+}
+main.main-product > div.grid > div.grid-item > a > span.info > div.top > span {
     font-size: 14px;
     vertical-align: top;
     font-weight: 100;
-    opacity: .8;
-  }
-  
-  main.main-product > div.grid > div.grid-item > a>span.info>div.bottom{
+    opacity: 0.8;
+}
+
+main.main-product > div.grid > div.grid-item > a > span.info > div.bottom {
     display: flex;
     justify-content: flex-end;
-  
+
     flex-wrap: wrap;
     text-align: right;
-  }
-  
-  main.main-product > div.grid > div.grid-item > a>span.info>div.bottom>h5{
+}
+
+main.main-product > div.grid > div.grid-item > a > span.info > div.bottom > h5 {
     width: 100%;
-  }
-  
-  
-  /*************************************************************************/
-  /************************main-prouct 主要產品區域*************************/
-  /*************************************************************************/
-  
+}
 
-  @media screen and (min-width: 1441px) and (max-width:1600px){
+/*************************************************************************/
+/************************main-prouct 主要產品區域*************************/
+/*************************************************************************/
 
-  }
-  
-  @media screen and (min-width: 1201px) and (max-width: 1440px) {
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
     main.main-product {
+        padding: 0 20px 75px 20px;
+    }
+    main.main-product > div.grid > div.grid-item {
+        width: calc(calc(100% / 3) - 10px);
+    }
+}
 
-      padding: 0 20px 75px 20px;
-    }
-    main.main-product > div.grid > div.grid-item{
-      width: calc(calc(100% / 3) - 10px);
-    }
-    
-  }
-  
-  @media screen and (min-width: 992px) and (max-width: 1200px){
+@media screen and (min-width: 992px) and (max-width: 1200px) {
     main.main-product {
+        padding: 0 20px 75px 20px;
+    }
+    main.main-product > div.grid > div.grid-item {
+        width: calc(calc(100% / 3) - 10px);
+    }
+}
 
-      padding: 0 20px 75px 20px;
-    }
-    main.main-product > div.grid > div.grid-item{
-      width: calc(calc(100% / 3) - 10px);
-    }
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     main.main-product {
+        padding: 0 20px 75px 20px;
+    }
+    main.main-product > div.grid > div.grid-item {
+        width: calc(calc(100% / 3) - 10px);
+    }
+}
 
-      padding: 0 20px 75px 20px;
-    }
-    main.main-product > div.grid > div.grid-item{
-      width: calc(calc(100% / 3) - 10px);
-    }
-  }
-  
-  @media screen  and (max-width: 767px){
+@media screen and (max-width: 767px) {
     main.main-product {
-
-      padding: 0 20px 75px 20px;
+        padding: 0 20px 75px 20px;
     }
-    main.main-product > div.grid > div.grid-item{
-      width: calc(calc(100% / 2) - 10px);
+    main.main-product > div.grid > div.grid-item {
+        width: calc(calc(100% / 2) - 10px);
     }
-  }
+}
 
-  @media screen  and (max-width: 575px){
+@media screen and (max-width: 575px) {
     main.main-product {
-      padding: 5px
+        padding: 5px;
     }
-    main.main-product > div.grid > div.grid-item{
-      width: calc(calc(100% / 2) - 5px);
-      margin: 2.5px;
+    main.main-product > div.grid > div.grid-item {
+        width: calc(calc(100% / 2) - 5px);
+        margin: 2.5px;
     }
-    main.main-product > div.grid > div.grid-item > a>span.info{
-      padding: unset;
-      position: relative;
-      height: unset;
-      opacity: 1;
+    main.main-product > div.grid > div.grid-item > a > span.info {
+        padding: unset;
+        position: relative;
+        height: unset;
+        opacity: 1;
     }
 
-    main.main-product > div.grid > div.grid-item{
-      background-color: unset;
+    main.main-product > div.grid > div.grid-item {
+        background-color: unset;
     }
-    main.main-product > div.grid > div.grid-item > a>span.info>div.top> span {
-      display: none;
+    main.main-product > div.grid > div.grid-item > a > span.info > div.top > span {
+        display: none;
     }
-    main.main-product > div.grid > div.grid-item > a>span.info>div.top> hr {
-      margin: 2px 0;
-      display: none;
+    main.main-product > div.grid > div.grid-item > a > span.info > div.top > hr {
+        margin: 2px 0;
+        display: none;
     }
-    main.main-product > div.grid > div.grid-item > a>span.info>div.top> p {
-      display: none;
+    main.main-product > div.grid > div.grid-item > a > span.info > div.top > p {
+        display: none;
     }
-    main.main-product > div.grid > div.grid-item > a>span.info>div.top{
-      height: unset;
-      
+    main.main-product > div.grid > div.grid-item > a > span.info > div.top {
+        height: unset;
     }
-    main.main-product > div.grid > div.grid-item > a>span.info>div.top> h4{
-      font-size: 14px;
-      background-color: #0b2659;
-      padding: 2px;
-      transform: translate(0,-50%);
+    main.main-product > div.grid > div.grid-item > a > span.info > div.top > h4 {
+        font-size: 14px;
+        background-color: #0b2659;
+        padding: 2px;
+        transform: translate(0, -50%);
     }
-    main.main-product > div.grid > div.grid-item > a>span.info>div.bottom{
-      display: none;
+    main.main-product > div.grid > div.grid-item > a > span.info > div.bottom {
+        display: none;
     }
- 
+
     /* main.main-product > div.grid > div.grid-item > a>span.info>div.bottom{
       text-align: left;
     } */
-    main.main-product > div.grid > div.grid-item > a>span.info>div.bottom>h5{
-      font-size: 14px;
-      display: inline-block;
-      width: unset;
+    main.main-product > div.grid > div.grid-item > a > span.info > div.bottom > h5 {
+        font-size: 14px;
+        display: inline-block;
+        width: unset;
     }
-  }
-  
+}
