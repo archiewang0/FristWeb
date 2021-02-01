@@ -133,7 +133,7 @@ indexTl
   .staggerTo(
     "div.second-row>img.ani-font",
     1,
-    { rotationX: -90, ease: SlowMo.ease.config(0.7, 0.7, false) },
+    { transform:' translate(-50%,0) rotateX(-90deg)', ease: SlowMo.ease.config(0.7, 0.7, false) },
     1
   )
   .add([

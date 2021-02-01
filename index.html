@@ -902,20 +902,20 @@
                 //可以選擇排版方式 ; 不過要載入cdn
                 // masonry: {
                 //   columnWidth: '.grid-sizer'
-                // }
+				// }
+				masonry: {
+					columnWidth: '.grid-item'
+				}
             })
-
-            const isotopeLayout = function () {
-                iso.Isotope('layout')
-            }
 
             imagesLoaded(grid).on('progress', function () {
                 // layout Isotope after each image loads
                 iso.layout()
             })
+			window.addEventListener('load',function(){
+				iso.layout()
+			})
 
-            iso.imagesLoaded(isotopeLayout)
-            window.addEventListener('load', isotopeLayout)
         </script>
     </body>
 </html>

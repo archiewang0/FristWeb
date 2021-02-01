@@ -4,7 +4,12 @@
   cursor: none !important;
 }
 
+/* ................iphone defalut 調整........................ */
 
+
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; }
+
+/* ................iphone defalut 調整........................ */
 
 /*...................scrollbar 的css style 調整................*/
 ::-webkit-scrollbar {
