@@ -2258,16 +2258,16 @@ div.sm_search_form
     padding: 10px;
   }
   div#menu > div.menuListBG > div.menuTopBar > a {
-    width: unset;
+    width: 83px;
     overflow: hidden;
     height: 100%;
     transform: translate(0, 11%);
   }
   div#menu > div.menuListBG > div.menuTopBar > a > img {
-    width: 70px;
     height: 100%;
-    object-fit: none;
-    object-position: 0;
+
+    max-width: unset;
+    max-height: unset;
   }
   div#menu > div.menuListBG > ul.menu_ul > li > a {
     padding: 10px;
