@@ -80,22 +80,53 @@ section.recommend_bar
   > div.fixed_recommend_bar
   > div.recommed_right
   > div.sort_box
-  > div.sort_top {
+  > a.sort_top {
   display: flex;
-  width: 100px;
+  width: 180px;
   border-bottom: 1px solid black;
 
   justify-content: space-between;
   align-items: center;
-
   cursor: pointer;
 }
+
+div.recommed_right
+  > div.sort_box{
+    position: relative;
+  }
+
+div.recommed_right
+  > div.sort_box
+  > ul{
+    background-color: white;
+    padding: 5px;
+    position: absolute;
+    /* height: 0px; */
+    display: none;
+    width: 100%;
+  }
+
+  div.recommed_right
+  > div.sort_box
+  > ul
+  >li{
+    padding: 5px;
+    font-size: 14px;
+  }
+  div.recommed_right
+  > div.sort_box
+  > ul
+  >li:hover{
+    background-color:  #0b2659;
+    color: white !important;
+  }
+
  
 section.recommend_bar
   > div.fixed_recommend_bar
   > div.recommed_right
   > div.sort_box
-  > div.sort_top
+  > a.sort_top
   > div.down_arrow {
   height: 100%;
   /* border: 1px solid red; */
@@ -163,6 +194,9 @@ section.recommend_bar
 }
 
 @media screen and (max-width: 575px){
+  section.recommend_bar > div.fixed_recommend_bar > div.recommed_right > div.sort_box > a.sort_top{
+    width: 170px;
+  }
   section.recommend_bar{
     height: unset;
     
